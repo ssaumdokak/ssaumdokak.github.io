@@ -982,62 +982,62 @@ select {
 
 
 
-/* Общие стили для контейнеров */
+
 .left-container,
 .right-container {
-    width: 40%; /* Разделение на две равные части */
-    display: inline-block; /* Заменяем float на inline-block */
-    padding: 0 15px; /* Добавление небольшого отступа по бокам */
-    box-sizing: border-box; /* Учитываем границу и внутренние отступы в общей ширине */
-    vertical-align: top; /* Выравниваем контейнеры по верхнему краю */
+    width: 40%; 
+    display: inline-block; 
+    padding: 0 15px; 
+    box-sizing: border-box; 
+    vertical-align: top; 
 }
 
 .left-container {
     padding-left: 0px;
 }
 
-/* Общие стили для контролов */
+
 .control-group {
-    margin-bottom: 20px; /* Отступ между группами контролов */
+    margin-bottom: 20px; 
 }
 
-/* Специфические стили для левого контейнера */
+
 .left-container .control-group {
-    width: 100%; /* Ширина контролов в левом контейнере */
+    width: 100%; 
 }
 
-/* Специфические стили для правого контейнера */
+
 .right-container .control-group {
-    width: 100%; /* Ширина контролов в правом контейнере */
+    width: 100%; 
 }
 
-/* Стили для кнопки отправки формы */
+
 .form-actions {
-    clear: both; /* Очистка плавающих элементов */
-    margin-top: 20px; /* Отступ сверху */
+    clear: both; 
+    margin-top: 20px; 
 }
 
-/* Стили для поля ввода */
+
 input[type="text"],
 input[type="email"],
 textarea,
 select {
-    width: 100%; /* Занимать всю доступную ширину */
-    padding: 10px; /* Поля ввода имеют небольшой отступ внутри */
-    margin-bottom: 10px; /* Небольшой отступ снизу каждого поля */
-    border: 1px solid #ccc; /* Обводка поля ввода */
-    border-radius: 4px; /* Скругление углов */
-    box-sizing: border-box; /* Учитывать границу и внутренние отступы в общей ширине */
+    width: 100%; 
+    padding: 10px; 
+    margin-bottom: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
 }
 
-/* Стили для кнопки отправки */
+
 .btn-primary {
-    background-color: #007bff; /* Цвет фона кнопки */
-    color: #fff; /* Цвет текста */
-    border: none; /* Убрать границу */
-    padding: 10px 20px; /* Поля внутри кнопки */
-    border-radius: 4px; /* Скругление углов */
-    cursor: pointer; /* Изменение курсора при наведении */
+    background-color: #007bff; 
+    color: #fff; 
+    border: none; 
+    padding: 10px 20px; 
+    border-radius: 4px; 
+    cursor: pointer; 
 }
 
 
