@@ -729,3 +729,424 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     display: inline-block;
     padding: 11px 20px 11px 64px;
 }
+
+
+.middle {
+    width: 100%;
+    position: relative;
+}
+
+@media (min-width: 1200px)
+.container {
+}
+@media (min-width: 992px)
+.container {
+}
+@media (min-width: 768px)
+.container {
+}
+
+.container5 {
+    margin-right: auto;
+    margin-left: auto;
+}
+.container5 {
+    width: 100%;
+    float: left;
+    margin-top: 0;
+    padding: 0;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+	
+
+}
+div {
+    display: block;
+}
+
+.clearfix:before, .clearfix:after, .dl-horizontal dd:before, .dl-horizontal dd:after, .container:before, .container:after, .container-fluid:before, .container-fluid:after, .row:before, .row:after, .form-horizontal .form-group:before, .form-horizontal .form-group:after, .btn-toolbar:before, .btn-toolbar:after, .btn-group-vertical > .btn-group:before, .btn-group-vertical > .btn-group:after, .nav:before, .nav:after, .navbar:before, .navbar:after, .navbar-header:before, .navbar-header:after, .navbar-collapse:before, .navbar-collapse:after, .pager:before, .pager:after, .panel-body:before, .panel-body:after, .modal-header:before, .modal-header:after, .modal-footer:before, .modal-footer:after {
+    display: table;
+    content: " ";
+}
+*:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+	
+	.clear {
+    clear: both;
+    height: 1px;
+}
+
+.content5 {
+    min-height: 826px;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+    display: block;
+}
+
+script {
+    display: none;
+}
+
+.content5 img {
+    margin: 0 auto !important;
+    display: block;
+}
+
+.contact5 img2 {
+    width: 100%;
+}
+img {
+    max-width: 100%;
+}
+
+#body-111 .wrapper {
+}
+.wrapper3 {
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 15px;
+}
+
+.head h1 {
+    font-size: 44px;
+    line-height: 60px;
+    font-weight: bold;
+    color: #324950;
+    margin: 0;
+    padding: 45px 0;
+}
+.cart-page h1, h1.login, .item-page h2, .contact h1 {
+    font-size: 36px !important;
+    margin: 18px 0 5px;
+    color: #fff;
+}
+h1, .h1 {
+    font-size: 36px;
+}
+h1, .h1, h2, .h2, h3, .h3 {
+    margin-bottom: 10px;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+
+h1 {
+}
+
+form {
+    display: block;
+    margin-top: 0em;
+}
+
+.contact-top .row {
+    display: flex;
+}
+
+.col-xs-18 {
+    width: 50%;
+}
+.col-xs-13, .col-xs-14, .col-xs-15, .col-xs-16, .col-xs-17, .col-xs-18, .col-xs-19, .col-xs-20, .col-xs-21, .col-xs-22, .col-xs-23, .col-xs-24 {
+    float: left;
+}
+.col-xs-13, .col-sm-13, .col-md-13, .col-lg-13, .col-xs-14, .col-sm-14, .col-md-14, .col-lg-14, .col-xs-15, .col-sm-15, .col-md-15, .col-lg-15, .col-xs-16, .col-sm-16, .col-md-16, .col-lg-16, .col-xs-17, .col-sm-17, .col-md-17, .col-lg-17, .col-xs-18, .col-sm-18, .col-md-18, .col-lg-18, .col-xs-19, .col-sm-19, .col-md-19, .col-lg-19, .col-xs-20, .col-sm-20, .col-md-20, .col-lg-20, .col-xs-21, .col-sm-21, .col-md-21, .col-lg-21, .col-xs-22, .col-sm-22, .col-md-22, .col-lg-22, .col-xs-23, .col-sm-23, .col-md-23, .col-lg-23, .col-xs-24, .col-sm-24, .col-md-24, .col-lg-24 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.l {
+    padding-left: 0 !important;
+}
+
+#contact-form label {
+    color: #324950;
+    font-size: 17px;
+    margin: 0 0 5px;
+}
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.address {
+    text-align: center;
+    color: #324950;
+    font-size: 17px;
+    line-height: 23px;
+    background: #fff;
+    padding: 30px 0;
+}
+
+.address .title {
+    color: #57984C;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.address .title:after {
+    content: "";
+    border-bottom: 1px solid #57984C;
+    display: block;
+    height: 1px;
+    max-width: 180px;
+    width: 100%;
+    margin: 25px auto;
+}
+
+p {
+    margin: 0 0 10px;
+}
+
+.address a {
+    color: #57984C;
+}
+a {
+    color: #000;
+}
+a {
+    text-decoration: none;
+}
+
+#contact-form select {
+    height: 55px;
+    width: 100%;
+    background: #FFFFFF;
+    border: 1px solid #D1D6DA;
+    border-radius: 10px;
+    padding: 0 10px;
+    margin: 0 0 10px;
+    outline: none;
+}
+
+select:not(:-internal-list-box) {
+    overflow: visible !important;
+}
+таблица стилей агента пользователя
+select {
+    font-style: ;
+    font-variant-ligatures: ;
+    font-variant-caps: ;
+    font-variant-numeric: ;
+    font-variant-east-asian: ;
+    font-variant-alternates: ;
+    font-variant-position: ;
+    font-weight: ;
+    font-stretch: ;
+    font-size: ;
+    font-family: ;
+    font-optical-sizing: ;
+    font-kerning: ;
+    font-feature-settings: ;
+    font-variation-settings: ;
+    text-rendering: auto;
+    color: fieldtext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    box-sizing: border-box;
+    align-items: center;
+    -webkit-rtl-ordering: logical;
+    background-color: field;
+    cursor: default;
+    margin: 0em;
+    white-space: pre;
+    border-width: 1px;
+    border-style: solid;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+    border-radius: 0px;
+}
+
+
+
+/* Общие стили для контейнеров */
+.left-container,
+.right-container {
+    width: 40%; /* Разделение на две равные части */
+    display: inline-block; /* Заменяем float на inline-block */
+    padding: 0 15px; /* Добавление небольшого отступа по бокам */
+    box-sizing: border-box; /* Учитываем границу и внутренние отступы в общей ширине */
+    vertical-align: top; /* Выравниваем контейнеры по верхнему краю */
+}
+
+.left-container {
+    padding-left: 0px;
+}
+
+/* Общие стили для контролов */
+.control-group {
+    margin-bottom: 20px; /* Отступ между группами контролов */
+}
+
+/* Специфические стили для левого контейнера */
+.left-container .control-group {
+    width: 100%; /* Ширина контролов в левом контейнере */
+}
+
+/* Специфические стили для правого контейнера */
+.right-container .control-group {
+    width: 100%; /* Ширина контролов в правом контейнере */
+}
+
+/* Стили для кнопки отправки формы */
+.form-actions {
+    clear: both; /* Очистка плавающих элементов */
+    margin-top: 20px; /* Отступ сверху */
+}
+
+/* Стили для поля ввода */
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+    width: 100%; /* Занимать всю доступную ширину */
+    padding: 10px; /* Поля ввода имеют небольшой отступ внутри */
+    margin-bottom: 10px; /* Небольшой отступ снизу каждого поля */
+    border: 1px solid #ccc; /* Обводка поля ввода */
+    border-radius: 4px; /* Скругление углов */
+    box-sizing: border-box; /* Учитывать границу и внутренние отступы в общей ширине */
+}
+
+/* Стили для кнопки отправки */
+.btn-primary {
+    background-color: #007bff; /* Цвет фона кнопки */
+    color: #fff; /* Цвет текста */
+    border: none; /* Убрать границу */
+    padding: 10px 20px; /* Поля внутри кнопки */
+    border-radius: 4px; /* Скругление углов */
+    cursor: pointer; /* Изменение курсора при наведении */
+}
+
+
+
+
+
+.contact-top {
+		background-color: #f6f6f6;
+}
+
+#contact-form .btn {
+    background: #57984C;
+    float: right; 
+    color: #fff;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+    display: block;
+    font-size: 18px;
+    font-family: Heebo-Medium;
+    padding: 18px 0;
+    text-align: center;
+    max-width: 280px;
+    width: 100%;
+    border-radius: 30px;
+    color: #fff;
+    cursor: pointer;
+    transition-duration: .2s;
+    height: 60px;
+    margin: -10px auto 60px;
+    border: none;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+
+
+.btn-primary {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+button {
+    appearance: auto;
+    font-style: ;
+    font-variant-ligatures: ;
+    font-variant-caps: ;
+    font-variant-numeric: ;
+    font-variant-east-asian: ;
+    font-variant-alternates: ;
+    font-variant-position: ;
+    font-weight: ;
+    font-stretch: ;
+    font-size: ;
+    font-family: ;
+    font-optical-sizing: ;
+    font-kerning: ;
+    font-feature-settings: ;
+    font-variation-settings: ;
+    text-rendering: auto;
+    color: buttontext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    box-sizing: border-box;
+    background-color: buttonface;
+    margin: 0em;
+    padding-block: 1px;
+    padding-inline: 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonborder;
+    border-image: initial;
+}
+
+.col-xs-24 {
+    width: 100%;
+}
+
+.r {
+    padding-right: 0 !important;
+}
