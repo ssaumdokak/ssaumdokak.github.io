@@ -938,7 +938,7 @@ a {
 select:not(:-internal-list-box) {
     overflow: visible !important;
 }
-таблица стилей агента пользователя
+
 select {
     font-style: ;
     font-variant-ligatures: ;
