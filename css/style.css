@@ -101,9 +101,9 @@ audio:not([controls]) {
 
 
 html {
-    font-size: 100%; /* 1 */
-    -webkit-text-size-adjust: 100%; /* 2 */
-    -ms-text-size-adjust: 100%; /* 2 */
+    font-size: 100%; 
+    -webkit-text-size-adjust: 100%; 
+    -ms-text-size-adjust: 100%; 
 }
 
 
@@ -122,8 +122,8 @@ a:hover {
 
 
 img {
-    border: 0; /* 1 */
-    -ms-interpolation-mode: bicubic; /* 2 */
+    border: 0; 
+    -ms-interpolation-mode: bicubic;
 }
 
 
@@ -149,10 +149,10 @@ fieldset {
 
 
 legend {
-    border: 0; /* 1 */
+    border: 0;
     padding: 0;
-    white-space: normal; /* 2 */
-    *margin-left: -7px; /* 3 */
+    white-space: normal; 
+    *margin-left: -7px; 
 }
 
 
@@ -161,10 +161,10 @@ button,
 input,
 select,
 textarea {
-    font-size: 100%; /* 1 */
-    margin: 0; /* 2 */
-    vertical-align: baseline; /* 3 */
-    *vertical-align: middle; /* 3 */
+    font-size: 100%; 
+    margin: 0; 
+    vertical-align: baseline; 
+    *vertical-align: middle; 
 }
 
 
@@ -184,12 +184,12 @@ select {
 
 
 button,
-html input[type="button"], /* 1 */
+html input[type="button"], 
 input[type="reset"],
 input[type="submit"] {
-    -webkit-appearance: button; /* 2 */
-    cursor: pointer; /* 3 */
-    *overflow: visible;  /* 4 */
+    -webkit-appearance: button; 
+    cursor: pointer; 
+    *overflow: visible;  
 }
 
 
@@ -203,18 +203,18 @@ html input[disabled] {
 
 input[type="checkbox"],
 input[type="radio"] {
-    box-sizing: border-box; /* 1 */
-    padding: 0; /* 2 */
-    *height: 13px; /* 3 */
-    *width: 13px; /* 3 */
+    box-sizing: border-box; 
+    padding: 0; 
+    *height: 13px; 
+    *width: 13px; 
 }
 
 
 
 input[type="search"] {
-    -webkit-appearance: textfield; /* 1 */
+    -webkit-appearance: textfield; 
     -moz-box-sizing: content-box;
-    -webkit-box-sizing: content-box; /* 2 */
+    -webkit-box-sizing: content-box; 
     box-sizing: content-box;
 }
 
@@ -234,8 +234,8 @@ input::-moz-focus-inner {
 
 
 textarea {
-    overflow: auto; /* 1 */
-    vertical-align: top; /* 2 */
+    overflow: auto; 
+    vertical-align: top; 
 }
 
 
@@ -291,8 +291,8 @@ textarea {
 	font-style: normal;
 	font-weight: 400;
 	src: local(''),
-		 url('../fonts/heebo-v18-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-		 url('../fonts/heebo-v18-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+		 url('../fonts/heebo-v18-latin-regular.woff2') format('woff2'), 
+		 url('../fonts/heebo-v18-latin-regular.woff') format('woff'); 
   }
 
   @font-face {
@@ -300,8 +300,8 @@ textarea {
 	font-style: normal;
 	font-weight: 500;
 	src: local(''),
-		 url('../fonts/heebo-v18-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-		 url('../fonts/heebo-v18-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+		 url('../fonts/heebo-v18-latin-500.woff2') format('woff2'), 
+		 url('../fonts/heebo-v18-latin-500.woff') format('woff'); 
   }
 
 @font-face {
@@ -309,8 +309,8 @@ textarea {
 	font-style: normal;
 	font-weight: 400;
 	src: local(''),
-		 url('../fonts/roboto-slab-v22-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-		 url('../fonts/roboto-slab-v22-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+		 url('../fonts/roboto-slab-v22-latin-regular.woff2') format('woff2'), 
+		 url('../fonts/roboto-slab-v22-latin-regular.woff') format('woff'); 
   }
 
   @font-face {
@@ -318,8 +318,8 @@ textarea {
 	font-style: normal;
 	font-weight: 300;
 	src: local(''),
-		 url('../fonts/roboto-slab-v22-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-		 url('../fonts/roboto-slab-v22-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+		 url('../fonts/roboto-slab-v22-latin-300.woff2') format('woff2'), 
+		 url('../fonts/roboto-slab-v22-latin-300.woff') format('woff'); 
   }
 
   @font-face {
@@ -327,8 +327,8 @@ textarea {
 	font-style: normal;
 	font-weight: 700;
 	src: local(''),
-		 url('../fonts/roboto-slab-v22-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-		 url('../fonts/roboto-slab-v22-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+		 url('../fonts/roboto-slab-v22-latin-700.woff2') format('woff2'),
+		 url('../fonts/roboto-slab-v22-latin-700.woff') format('woff');
   }
 
 @font-face {
@@ -336,8 +336,8 @@ textarea {
 	font-style: normal;
 	font-weight: 300;
 	src: local(''),
-		 url('../fonts/roboto-v29-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-		 url('../fonts/roboto-v29-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+		 url('../fonts/roboto-v29-latin-300.woff2') format('woff2'), 
+		 url('../fonts/roboto-v29-latin-300.woff') format('woff'); 
   }
 
   @font-face {
@@ -345,8 +345,8 @@ textarea {
 	font-style: normal;
 	font-weight: 400;
 	src: local(''),
-		 url('../fonts/roboto-v29-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-		 url('../fonts/roboto-v29-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+		 url('../fonts/roboto-v29-latin-regular.woff2') format('woff2'), 
+		 url('../fonts/roboto-v29-latin-regular.woff') format('woff');
   }
 
   @font-face {
@@ -354,8 +354,8 @@ textarea {
 	font-style: normal;
 	font-weight: 500;
 	src: local(''),
-		 url('../fonts/roboto-v29-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-		 url('../fonts/roboto-v29-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+		 url('../fonts/roboto-v29-latin-500.woff2') format('woff2'), 
+		 url('../fonts/roboto-v29-latin-500.woff') format('woff');
   }
 html{
 	box-sizing: border-box;
@@ -845,7 +845,7 @@ html{
 
 .main__tomatoes{
 	background: #f8eded;
-	/*background: #f7f8c6;*/
+	
 }
 
 
@@ -855,7 +855,6 @@ html{
 	width: 100%;
 	margin: 0 auto;
 	background: url(../images/tomato__all.jpg) no-repeat center;
-	/*background: url(../img/bananas.jpg) no-repeat center;*/
 	background-size: cover;
 	margin-top: 153px;
 
@@ -866,7 +865,6 @@ html{
 .tomatoes__block{
 	max-width: 1150px;
 	background-color: #f8eded;
-	/*background: #f7f8c6;*/
 	margin: 0 auto;
 	position: relative;
 	padding: 0 15px;
@@ -996,7 +994,6 @@ span.bold {
 .wrapper-full-1{
 	max-width: 1150px;
 	background: #f8eded;
-	/*background: #f7f8c6;*/
 	margin: 0 auto;
 	padding: 40px 15px 50px 15px;
 }
