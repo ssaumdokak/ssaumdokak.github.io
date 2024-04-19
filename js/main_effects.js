@@ -10,7 +10,6 @@
     };
 }());
 
-// Burger handler
 
 (function() {
     const burgerItem = document.querySelector('.burger');
