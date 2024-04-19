@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact us</title>
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/responsive.css">
-    <meta name="viewport" content="width=320, initial-scale=1.0"/>
 </head>
 <body>
     <header class="header__tomato__all">
@@ -38,7 +36,7 @@
 							<a href="#!" class="header__link">Company Profile</a>
 						</li>
 						<li class="header__item">
-							<a href="tomato__all.html" class="header__link">Products</a>
+							<a href="#!" class="header__link">Products</a>
 						</li>
 						<li class="header__item">
 							<a href="#!" class="header__link">Services</a>
@@ -59,78 +57,49 @@
 
 		</div>
 	</header>
-
+<!-- Header end -->
 
 <main class="main__contact__us">
     <div class="contact__us"></div>
 	<div class="wrapper-contact">
+    <!-- Intro__contact__us start -->	
+    <section class="intro__contact__us">
+            <div class="contact__us__block">
+                <h1 class="contact__us-title">
+                    Contact us
+                </h1>
+                <a class="contact__us__more"></a>
+            </div>
+    </section>
+    <!-- Intro__contact__us end -->
 
-		<section class="intro__contact__us">
-				<div class="contact__us__block">
-					<h1 class="contact__us-title">
-						Contact us
-					</h1>
-					<a class="contact__us__more"></a>
-				</div>
-		</section>
-
-	<div class="tag__tomatoes">
-
-		<div class="contact-cart" v-if="product" v-for="p in cart">
-
-			<div class="carts__cart cart">
-				<div class="cart__pic">
-					<img :src="'img/'+p.image" class="contact_card-pic">
-				</div>
-				
-				<div class="cart__info" >
-					<h1 class="cart__title" >
-						{{p.title}}
-					</h1>
-					<p class="cart__desk">
-						{{p.short_text}}
-					</p>
-				</div>
-
-				<div class="button__close-cart">
-					<button type="submit" class="close__cart" @click.prevent="removeFromCart(p.id)" v-if="checkInCart">
-						<img src="./images/close_icon.jpg" alt="close_icon" class="close_icon">
-					</button>
-				</div>
-
-			</div>
-
-		</div>
-	
-
-	
-	<form name="contact-form" @submit.prevent="makeOrder" v-if="orderVisible==0"> 
+    <!-- Contacts start -->
+	<div class="contacts">
 		<div class="wrapper-full-contact">
 
 			<div class="contacts__contact contact">
 				<div class="contact__info">
 					<p class="contact__desk">
-                        Name
-						<span class="required">*</span>
+                        Name *
 					</p>
-					<div class="contact-form">
+					<form class="contact-form">
 						<p class="contact-form__info">
-							<input type="text" name="name" id="name" value size="30" class="contact-form__field" required v-model="contactFields.name">
+							<input type="text" class="contact-form__field">
 						</p>
-					</div>
+					</form>
 				</div>
 
                 <div class="contact__info">
                     <p class="contact__desk">
                         You are a					
                     </p>
-                    <div class="contact-form">
+                    <form class="contact-form">
                         <p class="contact-form__info-1">
-                            <select name="producer" id="producer" aria-required="true" aria-invalid="false" class="contact-form__field-1" v-model.number="contactFields.producer">
+                            <select required="required" aria-required="true" aria-invalid="false" class="contact-form__field-1">
                                 <option>seed producer</option>
                             </select>
                         </p>
-                    </div>
+                    </form>
                 </div>
 			</div>
 
@@ -139,22 +108,22 @@
 					<p class="contact__desk">
                         Company Name
 					</p>
-					<div class="contact-form">
+					<form class="contact-form">
 						<p class="contact-form__info">
-							<input type="text" name="company" id="company" value size="30" class="contact-form__field" v-model="contactFields.company">
+							<input type="text" class="contact-form__field">
 						</p>
-					</div>
+					</form>
 				</div>
 
                 <div class="contact__info">
                     <p class="contact__desk">
                         If other, please specify					
                     </p>
-					<div class="contact-form">
+					<form class="contact-form">
 						<p class="contact-form__info">
-							<input type="text" name="specify" id="specify" value size="40" class="contact-form__field-1" v-model="contactFields.specify">
+							<input type="text" class="contact-form__field-1">
 						</p>
-					</div>
+					</form>
                 </div>
 			</div>
 
@@ -163,38 +132,38 @@
 					<p class="contact__desk">
                         Position
 					</p>
-					<div class="contact-form">
+					<form class="contact-form">
 						<p class="contact-form__info">
-							<input type="text" name="position" id="position" value size="30" class="contact-form__field" v-model="contactFields.position">
+							<input type="text" class="contact-form__field">
 						</p>
-					</div>
+					</form>
 
                     <p class="contact__desk">
                         City
                     </p>
-                    <div class="contact-form">
+                    <form class="contact-form">
                         <p class="contact-form__info">
-                            <input type="text" name="city" id="city" value size="30" class="contact-form__field" required v-model="contactFields.city">
-						</p>
-                    </div>
+                            <input type="text" class="contact-form__field">
+                        </p>
+                    </form>
 
                     <p class="contact__desk">
                         Country
                     </p>
-                    <div class="contact-form">
+                    <form class="contact-form">
                         <p class="contact-form__info">
-                            <input type="text" name="country" id="country" value size="30" class="contact-form__field" required v-model="contactFields.country">
-						</p>
-                    </div>
+                            <input type="text" class="contact-form__field">
+                        </p>
+                    </form>
 
                     <p class="contact__desk">
                         Telephone
                     </p>
-                    <div class="contact-form">
+                    <form class="contact-form">
                         <p class="contact-form__info">
-                            <input type="text" name="telephone" id="telephone" value size="30" class="contact-form__field" required v-model="contactFields.telephone">
-						</p>
-                    </div>
+                            <input type="text" class="contact-form__field">
+                        </p>
+                    </form>
 				</div>
 
                 <div class="contact__info">
@@ -203,130 +172,45 @@
                     </p>
 					<form class="contact-form">
 						<p class="contact-form__info">
-							<textarea aria-invalid="true" name="interested" id="interested" v-model="contactFields.interested" class="contact-form__field-2"></textarea>
+							<textarea required="required" aria-invalid="true" class="contact-form__field-2"></textarea>
 						</p>
 					</form>
                 </div>
 
                 <div class="contact__info">
 					<p class="contact__desk">
-                        Email
-						<span class="required">*</span>
+                        Email *
 					</p>
-					<div class="contact-form">
+					<form class="contact-form">
 						<p class="contact-form__info">
-							<input type="email" name="email" id="email" value size="30" class="contact-form__field" required v-model="contactFields.email">
+							<input type="text" class="contact-form__field">
 						</p>
-					</div>
+					</form>
 				</div>
 
                 <div class="contact__info">
                     <p class="contact__desk">
                         Please type this code					
                     </p>
+
                     <div class="wrapper__full__code">
                         <div class="contact__info-grid">
                             <img src="./images/svg/code.svg" alt="code" class="contact__pic">
-                            <input type="text" name="code" id="code" class="contact-form__field-3" v-model="contactFields.code">
-							<button type="submit" id="submit" @submit.prevent="makeOrder" class="contact__pic-1">
+                            <input type="text" class="contact-form__field-3">
+							<button type="submit" class="contact__pic-1">
 								Send Message
 							</button>
                         </div>
                     </div>
                 </div>
 			</div>
-		</div>
-			
-	</form>
 
-
-	<div class="wrapper-full-contact" v-if="orderVisible==1">
-
-		<div class="contact__LIST">
-			<h3 class="title__LIST">
-				Thank you for ordering on our website!<br> 
-				Your contact details have been recorded!
-			</h3>
-		</div>
-
-		<div class="contacts__contact contact">
-			<div class="contact__info">
-				<p class="contact__desk">
-					Name: {{contactFields.name}}
-				</p>
-				<div class="contact-form"></div>
-			</div>
-
-			<div class="contact__info">
-				<p class="contact__desk">
-					You are a: {{contactFields.producer}}					
-				</p>
-				<div class="contact-form"></div>
-			</div>
-		</div>
-
-		<div class="contacts__contact contact">
-			<div class="contact__info">
-				<p class="contact__desk">
-					Company Name: {{contactFields.company}}
-				</p>
-				<div class="contact-form"></div>
-			</div>
-
-			<div class="contact__info">
-				<p class="contact__desk">
-					If other, please specify: {{contactFields.specify}}					
-				</p>
-				<div class="contact-form"></div>
-			</div>
-		</div>
-
-		<div class="contacts__contact contact">
-			<div class="contact__info">
-				<p class="contact__desk">
-					Position: {{contactFields.position}}
-				</p>
-				<div class="contact-form"></div>
-
-				<p class="contact__desk">
-					City: {{contactFields.city}}
-				</p>
-				<div class="contact-form"></div>
-
-				<p class="contact__desk">
-					Country: {{contactFields.country}}
-				</p>
-				<div class="contact-form"></div>
-
-				<p class="contact__desk">
-					Telephone: {{contactFields.telephone}}
-				</p>
-				<div class="contact-form"></div>
-			</div>
-
-			<div class="contact__info">
-				<p class="contact__desk">
-					You are interested in: {{contactFields.interested}}					
-				</p>
-				<form class="contact-form"></form>
-			</div>
-
-			<div class="contact__info">
-				<p class="contact__desk">
-					Email: {{contactFields.email}}
-				</p>
-				<div class="contact-form"></div>
-			</div>
 		</div>
 	</div>
-
+	<!-- Contacts end -->
 	</div>
 
-
-
-	</div>
-
-
+    <!-- Contact-us start -->
 
     <section class="contact-us">
         <div class="contact-us__wrap">
@@ -347,11 +231,11 @@
         </div>
     </section>
 
-
+    <!-- Contact-us end -->
 </main>
 <script src="./js/main_effects.js"></script>
 
-
+<!-- Footer start -->
 <footer class="footer">
 	<div class="wrapper1">
 		<div class="footer__item">
@@ -420,8 +304,7 @@
 	</div>
 	</div>
 </footer>
+<!-- Footer end -->
 
-<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-<script src="./js/main.js"></script>
 </body>
 </html>
