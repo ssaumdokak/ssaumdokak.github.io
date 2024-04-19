@@ -1,162 +1,313 @@
 <!DOCTYPE html>
-<html lang="uk">
-<HEAD>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Heebo&display=swap">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/responsive.css">
-    <meta name="viewport" content="width=320, initial-scale=1.0"/>
-    <TITLE>Головна сторінка</TITLE>
-</HEAD>
-<BODY>
-    <div class="header">
-        <div class="wrapper">
-            <div class="row">
-                <div class="w-2">
-                    <div id="logo">
-                        <img src="./images/logo.png" alt="Logo">
-                    </div>
-                </div>
-                <div class="w-2 align-right">
-                    <div id="search">
-                        <div id="search-in" class="flex">
-                            <input type="text" placeholder="Search">
-                            <button>Submit</button>
-                        </div>
-                    </div>
-                    <div id="menu">
-                        <ul>    
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="">Company Profile</a></li>
-                            <li><a href="tomatoall.html">Products</a></li>
-                            <li><a href="">Services</a></li>
-                            <li><a href="">R&D</a></li>
-                            <li><a href="contactus.html">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<html lang="en">
+<head>
 
-    <div class="content">
-        <div id="slider">
-            <h1>Agridera Seeds and Agriculture Ltd</h1>
-            		<br>
-            <a href="#">READ MORE</a>
-        </div>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Agridera Seeds and Agriculture Ltd</title>
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+	<header class="header">
+		<div class="wrapper">
+			<div class="header__wrapper">
+				<div class="header__logo">
+					<a href="/" class="header__logo-link">
+						<img src="./images/svg/logo.svg" alt="Agridera Seeds and Agriculture Ltd" class="header__logo-pic">
+					</a>
+				</div>
+				<div class="header__nav__search-form">
+					<form class="search-form">
+						<p class="serch-form__info">
+							<input type="text" class="serch-form__field" placeholder="Search">
+						</p>
+					</form>
+				<nav class="header__nav">
+					<ul class="header__list">
+						<li class="header__item">
+							<a href="index.html" class="header__link">Home</a>
+						</li>
+						<li class="header__item">
+							<a href="#!" class="header__link">Company Profile</a>
+						</li>
+						<li class="header__item">
+							<a href="tomato__all.html" class="header__link">Products</a>
+						</li>
+						<li class="header__item">
+							<a href="#!" class="header__link">Services</a>
+						</li>
+						<li class="header__item">
+							<a href="#!" class="header__link">R & D</a>
+						</li>
+						<li class="header__item">
+							<a href="contact_us.html" class="header__link">Contact</a>
+					</ul>
+					<div class="header__nav-close">
+						<span class="header__nav-close-line"></span>
+						<span class="header__nav-close-line"></span>
+					</div>
+				</nav>
+				</div>
+				<div class="header__burger burger">
+					<span class="burger__line burger__line_first"></span>
+					<span class="burger__line burger__line_second"></span>
+					<span class="burger__line burger__line_third"></span>
+				</div>
+			</div>
+		</div>
+	</header>
 
-        <div id="sections">
-            <div class="row">
-                <div class="w-7">
-                    <a href=""><img src="./images/img1.png"></a>
-                    <div class="text">Wheat</div>
-                </div>
-                <div class="w-7">
-                    <a href=""><img src="./images/img2.png"></a>
-                    <div class="text">Confection Watermelon</div>
-                </div>
-                <div class="w-7">
-                    <a href=""><img src="./images/img3.png"></a>
-                    <div class="text">Clover</div>
-                </div>
-                <div class="w-7">
-                    <a href=""><img src="./images/img4.png"></a>
-                    <div class="text">Confection Sunflower</div>
-                </div>
-                <div class="w-7">
-                    <a href="tomatoall.html"><img src="./images/img5.png"></a>
-                    <div class="text">Tomato</div>
-                </div>
-                <div class="w-7">
-                    <a href=""><img src="./images/img6.png"></a>
-                    <div class="text">Eggplant P/O</div>
-                </div>
-                <div class="w-7">
-                    <a href=""><img src="./images/img7.png"></a>
-                    <div class="text">Ornamental Sunflower</div>
-                </div>
-            </div>
-        </div>
-        <div id="osnova"   style="background-image:url(images/union.png)">
-            <div id="vision" class="vision-frame">
-                <div class="content-enclosure">
-                    <h2 class="mes1">Vision</h2>
-                    <p class="mes2">×××××</p>
-                    <p class="mes3">We believe in long-term growth with an emphasis<br>on the potential of emerging markets. We also<br>support the global need of feeding the growing<br>population.</p>
-                </div>
-                <div class="photo-enclosure">
-                    <img src="./images/vision.png" alt="vision">
-                </div>
-            </div>
-            <div id="mission" class="mission-frame">
-                <div class="photo-enclosure2">
-                    <img src="./images/mission.png" alt="mission">
-                    <img src="./images/play.png" class="centered-image" alt="second image">
-                </div>
-                <div class="content-enclosure2">
-                    <h2 class="mes1">Mission</h2>
-                    <p class="mes2">×××××</p>
-                    <p class="mes3">Breeding and marketing seeds for advanced field<br>crops and vegetable varieties that provide an added<br>value to all supply chain partners.</p>
-                </div>
-            </div>
+<main class="main">
 
-        </div>
-        <div id="lower-content">
-            <div class="wrapper">
-                <p class="heading">Agridera`s main activies</p>
-                <p class="exes">×××××</p>
-                <div class="grains">
-                    <div class="w-3">
-                        <img style="margin-bottom: -50px;" src="images/seed.png">
-                        <p class="subheading">Open field crop seeds</p>
-                        <img class="line" src="images/Line.png">
-                        <p>wheat, cotton, legumes,<br>hybrid confection sunflower</p>
-                    </div>
-                    <div class="w-3">
-                        <img src="./images/tomato.png">
-                        <p class="subheading">Vegetable seeds</p>
-                        <img class="line" src="./images/Line.png">
-                        <p>hybrid open field tomatoes,<br>eggplant, onion, paprika, etc.</p>
-                    </div>
-                    <div class="w-3">
-                        <img src="./images/ornamental.png">
-                        <p class="subheading">Ornamental seeds</p>
-                        <img class="line" src="./images/Line.png">
-                        <p>hybrid cut sunflower, hybrid<br>patio tomatoes, Bells of Irland, etc.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="footer">
-        <div class="footer_section">
-            <div id="Сonnexions">
-                <ul>
-                    <li><a href="">PROFILE</a></li>
-                    <li><a href="">MANAGEMENT</a></li>
-                    <li><a href="tomatoall.html">PRODUCTS</a></li>
-                    <li><a href="">R&D</a></li>
-                    <li><a href="">LINKS</a></li>
-                    <li><a href="">SITEMAP</a></li>
-                    <li><a href="contactus.html">CONTACT</a></li>
-                </ul>
-            </div>
+		<section class="intro">
+			<div class="wrapper">
+				<h1 class="intro__title">
+				Agridera Seeds and Agriculture Ltd
+				</h1>
+				<button type="submit" class="btn">
+					read more
+				</button>
+			</div>
+		</section>
+	
+		<div class="products">
+			<div class="wrapper-full-products">
+				<div class="products__product_1 product">
 
-            <div class="social_media">
-                <a href=""><img src="./images/in.png" alt="IN"></a>
-                <a href=""><img src="./images/inst.png" alt="INSTAGRAM"></a>
-                <a href=""><img src="./images/tube.png" alt="YOUTUBE"></a>
-                <a href=""><img src="./images/tw.png" alt="TWITTER"></a>
-                <a href=""><img src="./images/fb.png" alt="FACEBOOK"></a>
-            </div>
-        </div>
-        		<br>
-        <p>AGRIDERA SEEDS & AGRICULTURE LTD. © 2020</p>
-        		<br>
-    </div>
-</BODY>
+					<div class="product__info_1">
+						<div class="product__pic_1">
+							<img src="./images/svg/1.svg" alt="1" class="product__thumb">
+						</div>
+						<p class="product__title_1">
+							Wheat
+						</p>
+					</div>
+
+					<div class="product__info_1">
+						<div class="product__pic_1">
+							<img src="./images/svg/2.svg" alt="2" class="product__thumb">
+						</div>
+						<p class="product__title_1">
+							Confection Watermelon
+						</p>
+					</div>
+
+					<div class="product__info_1">
+						<div class="product__pic_1">
+							<img src="./images/svg/3.svg" alt="3" class="product__thumb">
+						</div>
+						<p class="product__title_1">
+							Clover
+						</p>
+					</div>
+
+					<div class="product__info_1">
+						<div class="product__pic_1">
+							<img src="./images/svg/4.svg" alt="4" class="product__thumb">
+						</div>
+						<p class="product__title_1">
+							Confection Sunflower
+						</p>
+					</div>
+
+					<div class="product__info_1">
+						<div class="product__pic_1">
+							<img src="./images/svg/5.svg" alt="5" class="product__thumb">
+						</div>
+						<p class="product__title_1">
+							Tomato
+						</p>
+					</div>
+					
+					<div class="product__info_1">
+						<div class="product__pic_1">
+							<img src="./images/svg/6.svg" alt="6" class="product__thumb">
+						</div>
+						<p class="product__title_1">
+							Eggplant P/O
+						</p>
+					</div>
+
+					<div class="product__info_1">
+						<div class="product__pic_1">
+							<img src="./images/svg/7.svg" alt="7" class="product__thumb">
+						</div>
+						<p class="product__title_1">
+							Ornamental Sunflower
+						</p>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+
+	
+		<div class="plants">
+			<div class="wrapper-full">
+				<div class="plants__plant_1 plant">
+					<div class="plant__info_1">
+						<h2 class="plant__title_1">
+							Vision
+						</h2>
+						<a class="plant__more_1"></a>
+						<p class="plant__desk_1">
+							We believe in long-term growth with an emphasis on the potential of emerging markets. We also support the global need of feeding the growing population.
+						</p>
+					</div>
+					<div class="plant__pic_1 plant__pic_1__mob-first">
+						<img src="./images/plant-1.jpg" alt="Vision" class="plant__thumb">
+					</div>
+				</div>
+				<div class="plants__plant_2 plant">
+					<div class="plant__pic_2">
+						<img src="./images/plant-2.jpg" alt="Mission" class="plant__thumb">
+					</div>
+					<div class="plant__info_2">
+						<h2 class="plant__title_2">
+							Mission
+						</h2>
+						<a class="plant__more_2"></a>
+						<p class="plant__desk_2">
+							Breeding and marketing seeds for advanced field crops and vegetable varieties that provide an added value to all supply chain partners.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<section class="activities">
+			<div class="activities__wrap">
+				<div class="activities__wrap-cards">
+					<h4 class="activities__title">
+						Agridera’s main activities
+					</h4>
+					<a class="activities__more"></a>
+					<div class="activities__cards">
+						<div class="activities__card">
+							<div class="activities__card-pic">
+								<img src="./images/cotton.jpg" alt="Open field crop seeds" class="activities__card-thumb">
+							</div>
+							<h5 class="activities__card-title">
+								Open field crop seeds
+							</h5>
+							<a class="activities__cotton"></a>
+							<p class="activities__card-desc">
+								wheat, cotton, legumes,
+								hybrid confection sunflower
+							</p>
+						</div>
+						<div class="activities__card">
+							<div class="activities__card-pic">
+								<a href="tomato__all.html" class="activities__card-thumb">
+									<img src="./images/tomatoes.jpg" alt="Vegetable seeds">
+								</a>
+							</div>
+							<h5 class="activities__card-title">
+								Vegetable seeds
+							</h5>
+							<a class="activities__cotton"></a>
+							<p class="activities__card-desc">
+								hybrid open field tomatoes,
+								eggplant, onion, paprika, etc.
+							</p>
+						</div>
+						<div class="activities__card">
+							<div class="activities__card-pic">
+								<img src="./images/sunflowers.jpg" alt="Ornamental seeds" class="activities__card-thumb">
+							</div>
+							<h5 class="activities__card-title">
+								Ornamental seeds
+							</h5>
+							<a class="activities__cotton"></a>
+							<p class="activities__card-desc">
+								hybrid cut sunflowers, hybrid
+								patio tomatoes, Bells of Irland, etc.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+
+</main>
+<script src="./js/main_effects.js"></script>
+
+
+<footer class="footer">
+	<div class="wrapper1">
+		<div class="footer__item">
+			<div class="footer__menu">
+				<ul class="footer__list">
+					<li class="footer__item">
+						<a href="index.html" class="footer__link">PROFILE</a>
+					</li>
+					<li class="footer__item">
+						<a href="#!" class="footer__link">MANAGEMENT</a>
+					</li>
+					<li class="footer__item">
+						<a href="#!" class="footer__link">PRODUCTS</a>
+					</li>
+					<li class="footer__item">
+						<a href="#!" class="footer__link">R&D</a>
+					</li>
+					<li class="footer__item">
+						<a href="#!" class="footer__link">LINKS</a>
+					</li>
+					<li class="footer__item">
+						<a href="#!" class="footer__link">SITEMAP</a>
+					</li>
+					<li class="footer__item">
+						<a href="contact_us.html" class="footer__link">CONTACT</a>
+					</li>
+				</ul>
+			</div>
+			<nav class="footer__nav">
+					<ul class="menu__list">
+						<li class="menu__item">
+							<a href="#!" class="menu__link">
+								<img src="./images/svg/Ico_in.svg">	
+							</a>
+						</li>
+						<li class="menu__item">
+							<a href="#!" class="menu__link">
+								<img src="./images/svg/Ico_inst.svg">	 
+							</a>
+						</li>
+						<li class="menu__item">
+							<a href="#!" class="menu__link">
+								<img src="./images/svg/Ico_tube.svg">	
+							</a>
+						</li>
+						<li class="menu__item">
+							<a href="#!" class="menu__link">
+								<img src="./images/svg/Ico_tw.svg">	
+							</a>
+						</li>
+						<li class="menu__item">
+							<a href="#!" class="menu__link">
+								<img src="./images/svg/Ico_fb.svg">	
+							</a>
+						</li>
+					</ul>
+			</nav>
+		</div>
+	</div>
+	<div class="footer__1">
+		<div class="footer__title">
+			<p class="footer__title-1">
+				AGRIDERA SEEDS & AGRICULTURE LTD. © 2020
+			</p>
+		</div>
+	</div>
+	</div>
+</footer>
+
+
+
+
+
+</body>
 </html>
