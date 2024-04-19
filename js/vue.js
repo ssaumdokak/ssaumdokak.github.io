@@ -10039,13 +10039,10 @@
       }
     }
     return dynamicArgRE.test(name)
-      // dynamic [name]
       ? { name: name.slice(1, -1), dynamic: true }
-      // static name
       : { name: ("\"" + name + "\""), dynamic: false }
   }
 
-  // handle <slot/> outlets
   function processSlotOutlet (el) {
     if (el.tag === 'slot') {
       el.slotName = getBindingAttr(el, 'name');
@@ -10077,15 +10074,12 @@
       name = rawName = list[i].name;
       value = list[i].value;
       if (dirRE.test(name)) {
-        // mark element as dynamic
         el.hasBindings = true;
-        // modifiers
         modifiers = parseModifiers(name.replace(dirRE, ''));
-        // support .foo shorthand syntax for the .prop modifier
         if (modifiers) {
           name = name.replace(modifierRE, '');
         }
-        if (bindRE.test(name)) { // v-bind
+        if (bindRE.test(name)) {
           name = name.replace(bindRE, '');
           value = parseFilters(value);
           isDynamic = dynamicArgRE.test(name);
@@ -10131,7 +10125,7 @@
                   );
                 }
               } else {
-                // handler w/ dynamic event name
+
                 addHandler(
                   el,
                   ("\"update:\"+(" + name + ")"),
@@ -10140,7 +10134,7 @@
                   false,
                   warn$2,
                   list[i],
-                  true // dynamic
+                  true
                 );
               }
             }
@@ -10159,9 +10153,8 @@
             name = name.slice(1, -1);
           }
           addHandler(el, name, value, modifiers, false, warn$2, list[i], isDynamic);
-        } else { // normal directives
+        } else { 
           name = name.replace(dirRE, '');
-          // parse arg
           var argMatch = name.match(argRE);
           var arg = argMatch && argMatch[1];
           isDynamic = false;
@@ -10178,7 +10171,6 @@
           }
         }
       } else {
-        // literal attribute
         {
           var res = parseText(value, delimiters);
           if (res) {
@@ -10192,8 +10184,7 @@
           }
         }
         addAttr(el, name, JSON.stringify(value), list[i]);
-        // #6887 firefox doesn't update muted state if set via attribute
-        // even immediately after element creation
+
         if (!el.component &&
             name === 'muted' &&
             platformMustUseProp(el.tag, el.attrsMap.type, name)) {
@@ -10236,7 +10227,6 @@
     return map
   }
 
-  // for script (e.g. type="x/template") or style, do not decode content
   function isTextTag (el) {
     return el.tag === 'script' || el.tag === 'style'
   }
@@ -10254,7 +10244,6 @@
   var ieNSBug = /^xmlns:NS\d+/;
   var ieNSPrefix = /^NS\d+:/;
 
-  /* istanbul ignore next */
   function guardIESVGBug (attrs) {
     var res = [];
     for (var i = 0; i < attrs.length; i++) {
@@ -10284,7 +10273,7 @@
     }
   }
 
-  /*  */
+
 
   function preTransformNode (el, options) {
     if (el.tag === 'input') {
@@ -10306,19 +10295,17 @@
         var ifConditionExtra = ifCondition ? ("&&(" + ifCondition + ")") : "";
         var hasElse = getAndRemoveAttr(el, 'v-else', true) != null;
         var elseIfCondition = getAndRemoveAttr(el, 'v-else-if', true);
-        // 1. checkbox
+
         var branch0 = cloneASTElement(el);
-        // process for on the main node
         processFor(branch0);
         addRawAttr(branch0, 'type', 'checkbox');
         processElement(branch0, options);
-        branch0.processed = true; // prevent it from double-processed
+        branch0.processed = true; 
         branch0.if = "(" + typeBinding + ")==='checkbox'" + ifConditionExtra;
         addIfCondition(branch0, {
           exp: branch0.if,
           block: branch0
         });
-        // 2. add radio else-if condition
         var branch1 = cloneASTElement(el);
         getAndRemoveAttr(branch1, 'v-for', true);
         addRawAttr(branch1, 'type', 'radio');
@@ -10327,7 +10314,7 @@
           exp: "(" + typeBinding + ")==='radio'" + ifConditionExtra,
           block: branch1
         });
-        // 3. other
+
         var branch2 = cloneASTElement(el);
         getAndRemoveAttr(branch2, 'v-for', true);
         addRawAttr(branch2, ':type', typeBinding);
@@ -10362,7 +10349,7 @@
     model$1
   ];
 
-  /*  */
+
 
   function text (el, dir) {
     if (dir.value) {
@@ -10370,7 +10357,7 @@
     }
   }
 
-  /*  */
+
 
   function html (el, dir) {
     if (dir.value) {
@@ -10384,7 +10371,6 @@
     html: html
   };
 
-  /*  */
 
   var baseOptions = {
     expectHTML: true,
@@ -10399,31 +10385,21 @@
     staticKeys: genStaticKeys(modules$1)
   };
 
-  /*  */
+
 
   var isStaticKey;
   var isPlatformReservedTag;
 
   var genStaticKeysCached = cached(genStaticKeys$1);
 
-  /**
-   * Goal of the optimizer: walk the generated template AST tree
-   * and detect sub-trees that are purely static, i.e. parts of
-   * the DOM that never needs to change.
-   *
-   * Once we detect these sub-trees, we can:
-   *
-   * 1. Hoist them into constants, so that we no longer need to
-   *    create fresh nodes for them on each re-render;
-   * 2. Completely skip them in the patching process.
-   */
+
   function optimize (root, options) {
     if (!root) { return }
     isStaticKey = genStaticKeysCached(options.staticKeys || '');
     isPlatformReservedTag = options.isReservedTag || no;
-    // first pass: mark all non-static nodes.
+
     markStatic$1(root);
-    // second pass: mark static roots.
+
     markStaticRoots(root, false);
   }
 
@@ -10437,9 +10413,7 @@
   function markStatic$1 (node) {
     node.static = isStatic(node);
     if (node.type === 1) {
-      // do not make component slot content static. this avoids
-      // 1. components not able to mutate slot nodes
-      // 2. static slot content fails for hot-reloading
+
       if (
         !isPlatformReservedTag(node.tag) &&
         node.tag !== 'slot' &&
@@ -10471,9 +10445,7 @@
       if (node.static || node.once) {
         node.staticInFor = isInFor;
       }
-      // For a node to qualify as a static root, it should have children that
-      // are not just static text. Otherwise the cost of hoisting out will
-      // outweigh the benefits and it's better off to just always render it fresh.
+
       if (node.static && node.children.length && !(
         node.children.length === 1 &&
         node.children[0].type === 3
@@ -10497,17 +10469,17 @@
   }
 
   function isStatic (node) {
-    if (node.type === 2) { // expression
+    if (node.type === 2) { 
       return false
     }
-    if (node.type === 3) { // text
+    if (node.type === 3) { 
       return true
     }
     return !!(node.pre || (
-      !node.hasBindings && // no dynamic bindings
-      !node.if && !node.for && // not v-if or v-for or v-else
-      !isBuiltInTag(node.tag) && // not a built-in
-      isPlatformReservedTag(node.tag) && // not a component
+      !node.hasBindings && 
+      !node.if && !node.for && 
+      !isBuiltInTag(node.tag) && 
+      isPlatformReservedTag(node.tag) && 
       !isDirectChildOfTemplateFor(node) &&
       Object.keys(node).every(isStaticKey)
     ))
@@ -10526,13 +10498,12 @@
     return false
   }
 
-  /*  */
+
 
   var fnExpRE = /^([\w$_]+|\([^)]*?\))\s*=>|^function(?:\s+[\w$]+)?\s*\(/;
   var fnInvokeRE = /\([^)]*?\);*$/;
   var simplePathRE = /^[A-Za-z_$][\w$]*(?:\.[A-Za-z_$][\w$]*|\['[^']*?']|\["[^"]*?"]|\[\d+]|\[[A-Za-z_$][\w$]*])*$/;
 
-  // KeyboardEvent.keyCode aliases
   var keyCodes = {
     esc: 27,
     tab: 9,
@@ -10545,26 +10516,20 @@
     'delete': [8, 46]
   };
 
-  // KeyboardEvent.key aliases
   var keyNames = {
-    // #7880: IE11 and Edge use `Esc` for Escape key name.
     esc: ['Esc', 'Escape'],
     tab: 'Tab',
     enter: 'Enter',
-    // #9112: IE11 uses `Spacebar` for Space key name.
     space: [' ', 'Spacebar'],
-    // #7806: IE11 uses key names without `Arrow` prefix for arrow keys.
     up: ['Up', 'ArrowUp'],
     left: ['Left', 'ArrowLeft'],
     right: ['Right', 'ArrowRight'],
     down: ['Down', 'ArrowDown'],
-    // #9112: IE11 uses `Del` for Delete key name.
+
     'delete': ['Backspace', 'Delete', 'Del']
   };
 
-  // #4868: modifiers that prevent the execution of the listener
-  // need to explicitly return null so that we can determine whether to remove
-  // the listener for .once
+
   var genGuard = function (condition) { return ("if(" + condition + ")return null;"); };
 
   var modifierCode = {
@@ -10628,7 +10593,7 @@
       for (var key in handler.modifiers) {
         if (modifierCode[key]) {
           genModifierCode += modifierCode[key];
-          // left/right
+
           if (keyCodes[key]) {
             keys.push(key);
           }
@@ -10647,7 +10612,7 @@
       if (keys.length) {
         code += genKeyFilter(keys);
       }
-      // Make sure modifiers like prevent and stop get executed after key filtering
+
       if (genModifierCode) {
         code += genModifierCode;
       }
@@ -10664,9 +10629,7 @@
 
   function genKeyFilter (keys) {
     return (
-      // make sure the key filters only apply to KeyboardEvents
-      // #9441: can't use 'keyCode' in $event because Chrome autofill fires fake
-      // key events that do not have keyCode property...
+
       "if(!$event.type.indexOf('key')&&" +
       (keys.map(genFilterCode).join('&&')) + ")return null;"
     )
@@ -10689,7 +10652,6 @@
     )
   }
 
-  /*  */
 
   function on (el, dir) {
     if (dir.modifiers) {
@@ -10698,7 +10660,7 @@
     el.wrapListeners = function (code) { return ("_g(" + code + "," + (dir.value) + ")"); };
   }
 
-  /*  */
+
 
   function bind$1 (el, dir) {
     el.wrapData = function (code) {
@@ -10706,7 +10668,7 @@
     };
   }
 
-  /*  */
+
 
   var baseDirectives = {
     on: on,
@@ -10714,7 +10676,7 @@
     cloak: noop
   };
 
-  /*  */
+
 
 
 
@@ -10740,7 +10702,7 @@
     options
   ) {
     var state = new CodegenState(options);
-    // fix #11483, Root level <script> tags should not be rendered.
+
     var code = ast ? (ast.tag === 'script' ? 'null' : genElement(ast, state)) : '_c("div")';
     return {
       render: ("with(this){return " + code + "}"),
@@ -10766,7 +10728,7 @@
     } else if (el.tag === 'slot') {
       return genSlot(el, state)
     } else {
-      // component or element
+
       var code;
       if (el.component) {
         code = genComponent(el.component, el, state);
@@ -10779,7 +10741,7 @@
         var children = el.inlineTemplate ? null : genChildren(el, state, true);
         code = "_c('" + (el.tag) + "'" + (data ? ("," + data) : '') + (children ? ("," + children) : '') + ")";
       }
-      // module transforms
+
       for (var i = 0; i < state.transforms.length; i++) {
         code = state.transforms[i](el, code);
       }
@@ -10787,12 +10749,10 @@
     }
   }
 
-  // hoist static sub-trees out
+
   function genStatic (el, state) {
     el.staticProcessed = true;
-    // Some elements (templates) need to behave differently inside of a v-pre
-    // node.  All pre nodes are static roots, so we can use this as a location to
-    // wrap a state change and reset it upon exiting the pre node.
+
     var originalPreState = state.pre;
     if (el.pre) {
       state.pre = el.pre;
@@ -10802,7 +10762,7 @@
     return ("_m(" + (state.staticRenderFns.length - 1) + (el.staticInFor ? ',true' : '') + ")")
   }
 
-  // v-once
+
   function genOnce (el, state) {
     el.onceProcessed = true;
     if (el.if && !el.ifProcessed) {
@@ -10836,7 +10796,7 @@
     altGen,
     altEmpty
   ) {
-    el.ifProcessed = true; // avoid recursion
+    el.ifProcessed = true; 
     return genIfConditions(el.ifConditions.slice(), state, altGen, altEmpty)
   }
 
@@ -10857,7 +10817,7 @@
       return ("" + (genTernaryExp(condition.block)))
     }
 
-    // v-if with v-once should generate code like (a)?_m(0):_m(1)
+
     function genTernaryExp (el) {
       return altGen
         ? altGen(el, state)
@@ -10888,11 +10848,11 @@
         "v-for should have explicit keys. " +
         "See https://vuejs.org/guide/list.html#key for more info.",
         el.rawAttrsMap['v-for'],
-        true /* tip */
+        true 
       );
     }
 
-    el.forProcessed = true; // avoid recursion
+    el.forProcessed = true;
     return (altHelper || '_l') + "((" + exp + ")," +
       "function(" + alias + iterator1 + iterator2 + "){" +
         "return " + ((altGen || genElement)(el, state)) +
@@ -10902,63 +10862,61 @@
   function genData$2 (el, state) {
     var data = '{';
 
-    // directives first.
-    // directives may mutate the el's other properties before they are generated.
+
     var dirs = genDirectives(el, state);
     if (dirs) { data += dirs + ','; }
 
-    // key
+
     if (el.key) {
       data += "key:" + (el.key) + ",";
     }
-    // ref
+
     if (el.ref) {
       data += "ref:" + (el.ref) + ",";
     }
     if (el.refInFor) {
       data += "refInFor:true,";
     }
-    // pre
+
     if (el.pre) {
       data += "pre:true,";
     }
-    // record original tag name for components using "is" attribute
+
     if (el.component) {
       data += "tag:\"" + (el.tag) + "\",";
     }
-    // module data generation functions
+ 
     for (var i = 0; i < state.dataGenFns.length; i++) {
       data += state.dataGenFns[i](el);
     }
-    // attributes
+
     if (el.attrs) {
       data += "attrs:" + (genProps(el.attrs)) + ",";
     }
-    // DOM props
+
     if (el.props) {
       data += "domProps:" + (genProps(el.props)) + ",";
     }
-    // event handlers
+
     if (el.events) {
       data += (genHandlers(el.events, false)) + ",";
     }
     if (el.nativeEvents) {
       data += (genHandlers(el.nativeEvents, true)) + ",";
     }
-    // slot target
-    // only for non-scoped slots
+
     if (el.slotTarget && !el.slotScope) {
       data += "slot:" + (el.slotTarget) + ",";
     }
-    // scoped slots
+
     if (el.scopedSlots) {
       data += (genScopedSlots(el, el.scopedSlots, state)) + ",";
     }
-    // component v-model
+
     if (el.model) {
       data += "model:{value:" + (el.model.value) + ",callback:" + (el.model.callback) + ",expression:" + (el.model.expression) + "},";
     }
-    // inline-template
+
     if (el.inlineTemplate) {
       var inlineTemplate = genInlineTemplate(el, state);
       if (inlineTemplate) {
@@ -10966,17 +10924,15 @@
       }
     }
     data = data.replace(/,$/, '') + '}';
-    // v-bind dynamic argument wrap
-    // v-bind with dynamic arguments must be applied using the same v-bind object
-    // merge helper so that class/style/mustUseProp attrs are handled correctly.
+
     if (el.dynamicAttrs) {
       data = "_b(" + data + ",\"" + (el.tag) + "\"," + (genProps(el.dynamicAttrs)) + ")";
     }
-    // v-bind data wrap
+
     if (el.wrapData) {
       data = el.wrapData(data);
     }
-    // v-on data wrap
+
     if (el.wrapListeners) {
       data = el.wrapListeners(data);
     }
@@ -10994,8 +10950,7 @@
       needRuntime = true;
       var gen = state.directives[dir.name];
       if (gen) {
-        // compile-time directive that manipulates AST.
-        // returns true if it also needs a runtime counterpart.
+
         needRuntime = !!gen(el, dir, state.warn);
       }
       if (needRuntime) {
@@ -11027,31 +10982,19 @@
     slots,
     state
   ) {
-    // by default scoped slots are considered "stable", this allows child
-    // components with only scoped slots to skip forced updates from parent.
-    // but in some cases we have to bail-out of this optimization
-    // for example if the slot contains dynamic names, has v-if or v-for on them...
+
     var needsForceUpdate = el.for || Object.keys(slots).some(function (key) {
       var slot = slots[key];
       return (
         slot.slotTargetDynamic ||
         slot.if ||
         slot.for ||
-        containsSlotChild(slot) // is passing down slot from parent which may be dynamic
+        containsSlotChild(slot)
       )
     });
 
-    // #9534: if a component with scoped slots is inside a conditional branch,
-    // it's possible for the same component to be reused but with different
-    // compiled slot content. To avoid that, we generate a unique key based on
-    // the generated code of all the slot contents.
     var needsKey = !!el.if;
 
-    // OR when it is inside another scoped slot or v-for (the reactivity may be
-    // disconnected due to the intermediate scope variable)
-    // #9438, #9506
-    // TODO: this can be further optimized by properly analyzing in-scope bindings
-    // and skip force updating ones that do not actually use scope variables.
     if (!needsForceUpdate) {
       var parent = el.parent;
       while (parent) {
@@ -11115,7 +11058,7 @@
           ? ("(" + (el.if) + ")?" + (genChildren(el, state) || 'undefined') + ":undefined")
           : genChildren(el, state) || 'undefined'
         : genElement(el, state)) + "}";
-    // reverse proxy v-slot without scope on this.$slots
+
     var reverseProxy = slotScope ? "" : ",proxy:true";
     return ("{key:" + (el.slotTarget || "\"default\"") + ",fn:" + fn + reverseProxy + "}")
   }
@@ -11149,10 +11092,7 @@
     }
   }
 
-  // determine the normalization needed for the children array.
-  // 0: no normalization needed
-  // 1: simple normalization needed (possible 1-level deep nested array)
-  // 2: full normalization needed
+
   function getNormalizationType (
     children,
     maybeComponent
@@ -11192,7 +11132,7 @@
 
   function genText (text) {
     return ("_v(" + (text.type === 2
-      ? text.expression // no need for () because already wrapped in _s()
+      ? text.expression 
       : transformSpecialNewlines(JSON.stringify(text.text))) + ")")
   }
 
@@ -11206,7 +11146,7 @@
     var res = "_t(" + slotName + (children ? (",function(){return " + children + "}") : '');
     var attrs = el.attrs || el.dynamicAttrs
       ? genProps((el.attrs || []).concat(el.dynamicAttrs || []).map(function (attr) { return ({
-          // slot props are camelized
+
           name: camelize(attr.name),
           value: attr.value,
           dynamic: attr.dynamic
@@ -11225,7 +11165,6 @@
     return res + ')'
   }
 
-  // componentName is el.component, take it as argument to shun flow's pessimistic refinement
   function genComponent (
     componentName,
     el,
@@ -11255,34 +11194,29 @@
     }
   }
 
-  // #3895, #4268
+
   function transformSpecialNewlines (text) {
     return text
       .replace(/\u2028/g, '\\u2028')
       .replace(/\u2029/g, '\\u2029')
   }
 
-  /*  */
-
-
-
-  // these keywords should not appear inside expressions, but operators like
-  // typeof, instanceof and in are allowed
+  
   var prohibitedKeywordRE = new RegExp('\\b' + (
     'do,if,for,let,new,try,var,case,else,with,await,break,catch,class,const,' +
     'super,throw,while,yield,delete,export,import,return,switch,default,' +
     'extends,finally,continue,debugger,function,arguments'
   ).split(',').join('\\b|\\b') + '\\b');
 
-  // these unary operators should not be used as property/method names
+
   var unaryOperatorsRE = new RegExp('\\b' + (
     'delete,typeof,void'
   ).split(',').join('\\s*\\([^\\)]*\\)|\\b') + '\\s*\\([^\\)]*\\)');
 
-  // strip strings in expressions
+
   var stripStringRE = /'(?:[^'\\]|\\.)*'|"(?:[^"\\]|\\.)*"|`(?:[^`\\]|\\.)*\$\{|\}(?:[^`\\]|\\.)*`|`(?:[^`\\]|\\.)*`/g;
 
-  // detect problematic expressions in a template
+
   function detectErrors (ast, warn) {
     if (ast) {
       checkNode(ast, warn);
@@ -11389,8 +11323,6 @@
     }
   }
 
-  /*  */
-
   var range = 2;
 
   function generateCodeFrame (
@@ -11412,7 +11344,7 @@
           res.push(("" + (j + 1) + (repeat$1(" ", 3 - String(j + 1).length)) + "|  " + (lines[j])));
           var lineLength = lines[j].length;
           if (j === i) {
-            // push underline
+     
             var pad = start - (count - lineLength) + 1;
             var length = end > count ? lineLength - pad : end - start;
             res.push("   |  " + repeat$1(" ", pad) + repeat$1("^", length));
@@ -11433,7 +11365,7 @@
   function repeat$1 (str, n) {
     var result = '';
     if (n > 0) {
-      while (true) { // eslint-disable-line
+      while (true) {
         if (n & 1) { result += str; }
         n >>>= 1;
         if (n <= 0) { break }
@@ -11443,7 +11375,7 @@
     return result
   }
 
-  /*  */
+
 
 
 
@@ -11468,9 +11400,9 @@
       var warn$$1 = options.warn || warn;
       delete options.warn;
 
-      /* istanbul ignore if */
+
       {
-        // detect possible CSP restriction
+
         try {
           new Function('return 1');
         } catch (e) {
@@ -11486,7 +11418,7 @@
         }
       }
 
-      // check cache
+
       var key = options.delimiters
         ? String(options.delimiters) + template
         : template;
@@ -11494,10 +11426,9 @@
         return cache[key]
       }
 
-      // compile
+
       var compiled = compile(template, options);
 
-      // check compilation errors/tips
       {
         if (compiled.errors && compiled.errors.length) {
           if (options.outputSourceRange) {
@@ -11525,7 +11456,7 @@
         }
       }
 
-      // turn code into functions
+
       var res = {};
       var fnGenErrors = [];
       res.render = createFunction(compiled.render, fnGenErrors);
@@ -11533,10 +11464,7 @@
         return createFunction(code, fnGenErrors)
       });
 
-      // check function generation errors.
-      // this should only happen if there is a bug in the compiler itself.
-      // mostly for codegen development use
-      /* istanbul ignore if */
+
       {
         if ((!compiled.errors || !compiled.errors.length) && fnGenErrors.length) {
           warn$$1(
@@ -11556,7 +11484,7 @@
     }
   }
 
-  /*  */
+
 
   function createCompilerCreator (baseCompile) {
     return function createCompiler (baseOptions) {
@@ -11574,7 +11502,7 @@
 
         if (options) {
           if (options.outputSourceRange) {
-            // $flow-disable-line
+
             var leadingSpaceLength = template.match(/^\s*/)[0].length;
 
             warn = function (msg, range, tip) {
@@ -11590,19 +11518,19 @@
               (tip ? tips : errors).push(data);
             };
           }
-          // merge custom modules
+
           if (options.modules) {
             finalOptions.modules =
               (baseOptions.modules || []).concat(options.modules);
           }
-          // merge custom directives
+
           if (options.directives) {
             finalOptions.directives = extend(
               Object.create(baseOptions.directives || null),
               options.directives
             );
           }
-          // copy other options
+
           for (var key in options) {
             if (key !== 'modules' && key !== 'directives') {
               finalOptions[key] = options[key];
@@ -11628,11 +11556,6 @@
     }
   }
 
-  /*  */
-
-  // `createCompilerCreator` allows creating compilers that use alternative
-  // parser/optimizer/codegen, e.g the SSR optimizing compiler.
-  // Here we just export a default compiler using the default parts.
   var createCompiler = createCompilerCreator(function baseCompile (
     template,
     options
@@ -11649,15 +11572,13 @@
     }
   });
 
-  /*  */
-
+  
   var ref$1 = createCompiler(baseOptions);
   var compile = ref$1.compile;
   var compileToFunctions = ref$1.compileToFunctions;
 
-  /*  */
 
-  // check whether current browser encodes a char inside attribute values
+
   var div;
   function getShouldDecode (href) {
     div = div || document.createElement('div');
@@ -11665,12 +11586,12 @@
     return div.innerHTML.indexOf('&#10;') > 0
   }
 
-  // #3663: IE encodes newlines inside attribute values while other browsers don't
+
   var shouldDecodeNewlines = inBrowser ? getShouldDecode(false) : false;
-  // #6828: chrome encodes content in a[href]
+
   var shouldDecodeNewlinesForHref = inBrowser ? getShouldDecode(true) : false;
 
-  /*  */
+
 
   var idToTemplate = cached(function (id) {
     var el = query(id);
@@ -11684,7 +11605,6 @@
   ) {
     el = el && query(el);
 
-    /* istanbul ignore if */
     if (el === document.body || el === document.documentElement) {
       warn(
         "Do not mount Vue to <html> or <body> - mount to normal elements instead."
@@ -11693,14 +11613,14 @@
     }
 
     var options = this.$options;
-    // resolve template/el and convert to render function
+
     if (!options.render) {
       var template = options.template;
       if (template) {
         if (typeof template === 'string') {
           if (template.charAt(0) === '#') {
             template = idToTemplate(template);
-            /* istanbul ignore if */
+
             if (!template) {
               warn(
                 ("Template element not found or is empty: " + (options.template)),
@@ -11720,7 +11640,7 @@
         template = getOuterHTML(el);
       }
       if (template) {
-        /* istanbul ignore if */
+
         if (config.performance && mark) {
           mark('compile');
         }
@@ -11737,7 +11657,7 @@
         options.render = render;
         options.staticRenderFns = staticRenderFns;
 
-        /* istanbul ignore if */
+
         if (config.performance && mark) {
           mark('compile end');
           measure(("vue " + (this._name) + " compile"), 'compile', 'compile end');
@@ -11747,10 +11667,7 @@
     return mount.call(this, el, hydrating)
   };
 
-  /**
-   * Get outerHTML of elements, taking care
-   * of SVG elements in IE as well.
-   */
+
   function getOuterHTML (el) {
     if (el.outerHTML) {
       return el.outerHTML
