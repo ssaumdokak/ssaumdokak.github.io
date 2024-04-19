@@ -1,120 +1,707 @@
-@media (max-width: 1024px)
-{
-	
-#osnova {
-    padding: 78px 30px;
-}	
-
-.social_media {
-    margin-right: 15px;
+@media screen and (max-width: 1150px){
+	.contacts__contact {
+		grid-template-columns: repeat(2, 1fr);
+		width: 100%;
+		column-gap: 125px;
+	}
+	.contact__info-grid{
+		grid-template-columns: repeat(1, 1fr);
+		gap: 0 10px;
+	}	
 }
 
-#Сonnexions {
-    margin-left: 0px;
+@media screen and (max-width: 905px){
+	.tags__tag{
+		grid-template-columns: repeat(1, 1fr);
+	}
+	.tag__pic{
+		text-align: center;
+	}
+	.tag__pic-pic-1{
+		width: 36%;
+	}
+	.tag__pic-pic{
+		width: 50%;
+	}
+	.tag__title, .tag__desk, .tag__more::after{
+		text-align: center;
+	}
+	.tag__desk-1{
+		text-align: center;
+	}
+	.tag__pic-pic-1{
+		margin-bottom: 20px;
+	}
+	.tags__tag-2{
+		gap: 0 50px;
+	}
 }
 
-.line { 
-	margin-left: -20px;
-   }
-   
-   .line1 { 
-	margin-left: 100px;
-   }
-
-.whirebor {
-	margin-left: 47px;
+@media screen and (max-width: 1024px) {	
+	.tag__card-desc {
+		font-size: 14px;
+	}
+	.tags__tag {
+		width: 100%;
+	}
+	.tag__desk {
+		font-size: 52px;
+	}
+	.tags__tag-1 {
+		width: 100%;
+	}
+	.contacts__contact {
+		grid-template-columns: repeat(2, 1fr);
+		width: 100%;
+		column-gap: 50px;
+	}
+	.tomato__all {
+		height: 30vh;
+		margin-top: 150px;
+	}
+	.contact__us {
+		height: 30vh;
+		margin-top: 150px;
+	}
+	.intro {
+		height: 80vh;
+		padding-top: 300px;
+	}
+	.activities__cards {
+		gap: 10px;
+	}
+	.products__product_1{
+		gap: 70px;
+	}
+	.contact-form__field{
+		width: 100%;
+	}
+	.contact-form__field-1{
+		width: 100%;
+	}
+	.contact-form__field-2{
+		width: 100%;
+	}
+	.contact-form__field-3{
+		width: 100%;
+		margin-bottom: 15px;
+	}
+	.contact__pic{
+		margin-bottom: 15px;
+	}
+	.contact__info-grid{
+		grid-template-columns: repeat(1, 1fr);
+		gap: 0 10px;
+	}
+	.markets__card-title, .markets__1::after, .markets__card-desc, .markets__wrap{
+		width: 100%;
+	}
+	.markets__cards{
+		grid-template-columns: repeat(1, 1fr);
+		width: 100%;
+	}
+	.markets__1::after {
+		font-size: 20px;
+		content: "_________________________________________________";
+	}
+	.tag__tomatoes__card_size_lg {
+		grid-column: span 3;
+	}
+	.tomatoes__all-title{
+		text-align: center;
+	}
+	.tomaties__all__more::after{
+		text-align: center;
+	}
+	.tomatoes__all-desc-1, .tomatoes__all-desc, .tomatoes__all-strip{
+		text-align: center;
+	}
+	.markets__card-title, .markets__1::after, .markets__card-desc{
+		text-align: center;
+	}
+	.tomatoes__all-strip-1{
+		text-align: center;
+	}
+	.tag__pic-pic {
+		width: 100%;
+		margin-bottom: 60px;
+	}
 }
 
-.container2 {
-  grid-template-columns: repeat(3, 290px);
+@media screen and (min-width: 1024px) {
+	.contact-form__field{
+		width: 100%;
+	}
+	.contact-form__field-1{
+		width: 100%;
+	}
+	.contact-form__field-2{
+		width: 100%;
+	}
+	.contact-form__field-3{
+		margin-bottom: 15px;
+	}
+	.contact__pic{
+		margin-bottom: 15px;
+	}
 }
 
-.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
-    padding-right: 30px;
-    padding-left: 0px;
+@media screen and (max-width: 880px){
+	.footer__item {
+		margin-bottom: 25px;
+	}
+	.footer__nav{
+		margin-left: 0;
+	}
+	.intro {
+		padding-top: 300px;
+		height: 80vh;
+	}
+	.plants {
+		margin-bottom: 0;
+		padding: 30px 30px;
+	}
+	.footer__item{
+		justify-content: space-around;
+	}
 }
 
-.product-page {
-    background-size: auto 60%;
+@media screen and (max-width: 768px) {
+	.header__burger{
+		display: block;
+	}
+	.header__nav{
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		background: white;
+		z-index: 10;
+		padding: 75px;
+		transform: translateX(100%);
+		transition: .2s all linear;
+	}
+	.header__nav_active{
+		transform: translateX(0);
+	}
+	.header__item{
+		width: 100%;
+		margin-right: 0;
+		margin-bottom: 30px;
+	}
+	.header__item:last-child{
+		margin-bottom: 0;
+	}
+	.header__link{
+		font-size: 42px;
+		line-height: 48px;
+	}
+	.header__nav-close{
+		width: 40px;
+		height: 40px;
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		z-index: 11;
+	}
+	.header__nav-close-line{
+		display: block;
+		width: 100%;
+		height: 2px;
+		background-color: black;
+		position: absolute;
+		top: 50%;
+	}
+	.header__nav-close-line:first-child{
+		transform: translateY(-50%) rotate(45deg);
+	}
+	.header__nav-close-line:last-child{
+		transform: translateY(-50%) rotate(-45deg);
+	}
+	.intro__title {
+		font-size: 42px;
+	}
+	.plants {
+		padding: 20px 20px;
+		margin-bottom: 0;
+	}
+	.activities__title {
+		font-size: 48px;
+		padding: 40px 0px 14px 0px;
+	}
+	.activities__more::after {
+		font-size: 14px;
+		margin-bottom: 10px;
+	}
+	.activities__cards {
+		gap: 20px;
+	}
+	.activities__card-title {
+		font-size: 22px;
+	}
+	.activities__card-desc {
+		font-size: 14px;
+		margin-bottom: 40px;
+	}
+	.wrapper1 {
+		padding: 20px 15px;
+	}
+	.header__wrapper {
+		align-items: flex-start;
+		margin-top: 20px;
+	}
+	.markets__1::after {
+		font-size: 20px;
+		content: "_________________________________________________";
+	}
+	.tag__tomatoes__card_size_lg {
+		grid-column: span 3;
+	}
+	.tomatoes__one-desc {
+		font-size: 18px;
+	}
+	.tag__title {
+		font-size: 35px;
+	}
+	.tag__desk {
+		font-size: 32px;
+	}
+	.tag__desk-1 {
+		font-size: 22px;
+	}
+	.tag__pic-pic-3 {
+		margin-bottom: 80px;
+	}
+	.contact__us-title {
+		font-size: 42px;
+		padding-top: 31px;
+		padding-bottom: 20px;
+	}
+	.contact__us__block{
+		text-align: center;
+	}
+	.contact__us__more::after {
+		text-align: center;
+	}
+	.contact__us__more::after {
+		font-size: 14px;
+		margin-bottom: 30px;
+	}
+	.contact-us__title {
+		padding-top: 24px;
+	}
+	.contact-us-desc {
+		margin-bottom: 24px;
+	}
+	.contact__pic, .contact-form__field-3, .contact__pic-1{
+		grid-column: span 3;
+	}
+	.tomato__all {
+		height: 20vh;
+		margin-top: 194px;
+	}
+	.contact__us {
+		height: 20vh;
+		margin-top: 194px;
+	}
+	.header__logo{
+		margin-bottom: 10px;
+	}
+	.search-form {
+		margin-bottom: 0;
+	}
+	.header__wrapper {
+		margin-top: 0;
+	}
+	.header__nav__search-form{
+		width: 100%;
+		text-align: center;
+	}
+	.search-form {
+		display: block;
+	}
+	.header__logo{
+		width: 100%;
+		text-align: center;
+	}	
+	.header__burger {
+		position: absolute;
+		right: 15px;
+	}
+	.tag__pic-pic-1{
+		width: 225px;
+	}
 }
 
-.col-xs-12 {
-    width: 70%;
-		margin-top: -50px;
-		    padding-left: 20px;
-
+@media screen and (max-width: 640px){
+	.plant__title_1 {
+		font-size: 40px;
+		margin-bottom: 5px;
+	}
+	.plant__more_1::after {
+		font-size: 14px;
+		margin-bottom: 10px;
+	}
+	.plant__desk_1 {
+		font-size: 18px;
+	}
+	.plant__title_2 {
+		font-size: 40px;
+		margin-bottom: 5px;
+	}
+	.plant__more_2::after {
+		font-size: 14px;
+		margin-bottom: 10px;
+	}
+	.plant__desk_2 {
+		font-size: 18px;
+	}
+	.activities__title {
+		font-size: 46px;
+		padding: 20px 0px 14px 0px;
+	}
+	.activities__card-title {
+		font-size: 18px;
+	}
+	.activities__card-desc {
+		font-size: 11px;
+		margin-bottom: 25px;
+	}
+	.serch-form__field {
+		width: 250px;
+		font-size: 18px;
+	}
+	.tag__card-desc {
+		font-size: 12px;
+	}
+	.tomatoes__one-desc {
+		font-size: 18px;
+	}
+	.tag__title {
+		font-size: 30px;
+	}
+	.tag__desk {
+		font-size: 27px;
+		margin-bottom: 10px;
+	}
+	.tag__pic-pic {
+		margin-bottom: 40px;
+	}
+	.tag__desk-1 {
+		font-size: 18px;
+	}
+	.tag__pic-pic-3 {
+		margin-bottom: 50px;
+	}
+	.intro {
+		padding-top: 270px;
+		height: 70vh;
+	}
+	.tomato__all {
+		height: 20vh;
+		margin-top: 197px;
+	}
+	.contact__us {
+		height: 20vh;
+		margin-top: 197px;
+	}
+	.wrapper {
+		max-width: 640px;
+	}
+	.serch-form__field {
+		width: 355px;
+	}
+	.header__link {
+		font-size: 38px;
+	}
+	.activities__card{
+		grid-column: span 3;
+		justify-content: stretch;
+	}
+	.activities__title {
+		font-size: 38px;
+	}
+	.activities__card-desc {
+		font-size: 18px;
+		margin-bottom: 15px;
+	}
+	.footer__item{
+		width: 100%;
+		margin-bottom: 20px;
+		text-align: center;
+		margin-right: 0;
+	}
 }
 
-.product-page .phrase.w {
-    font-size: 25px;
+@media screen and (max-width: 600px){
+	.contact__info, .contact__info{
+		grid-column: span 2;
+	}
+	.contacts__contact{
+		gap: 0;
+	}
 }
 
-.product-page .phrase {
-    margin: 30px 20px 0;
+@media screen and (max-width: 560px){
+	.tag__pic-pic{
+		grid-template-columns: 80px 330px;
+	}
 }
 
-.mes8 {
-	padding-left: 20px;
+@media screen and (max-width: 480px){
+	.intro {
+		padding-top: 250px;
+		height: 70vh;
+	}
+	.plant__info_1, .plant__pic_1{
+		grid-column: span 2;
+		text-align: center;
+		margin-top: 20px;
+	}
+	.plant__pic_2, .plant__info_2{
+		grid-column: span 2;
+		text-align: center;
+		margin-top: 20px;
+	}
+	.plant__pic_1__mob-first{
+		grid-row-start: -1;
+	}
+	.tomato__all {
+		height: 20vh;
+		margin-top: 197px;
+	}
+	.contact__us{
+		height: 20vh;
+		margin-top: 197px;
+	}
+	.tomatoes__all-title {
+		font-size: 22px;
+		padding: 20px 0;
+	}
+	.tomaties__all__more::after {
+		font-size: 14px;
+		margin-bottom: 20px;
+	}
+	.tomatoes__all-strip::after {
+		height: 95px;
+	}
+	.markets__card-title {
+		margin-top: 40px;
+		font-size: 22px;
+	}
+	.tomatoes__all-strip-1::after {
+		height: 45px;
+	}
+	.tag__tomatoes__card_size_lg {
+		grid-column: span 6;
+	}
+	.tag__info, .tag__pic{
+		grid-column: span 2;
+	}
+	.header__logo{
+		margin-bottom: 10px;
+	}
+	.search-form {
+		margin-bottom: 0;
+	}
+	.header__wrapper {
+		margin-top: 0;
+	}
+	.tomatoes__one-desc {
+		font-size: 18px;
+	}
+	.tomatoes__one__block {
+		margin-top: 30px;
+		padding-bottom: 20px;
+	}
+	.tag__thumb{
+		width: 80%;
+		margin-bottom: 20px;
+	}
+	.tag__info-1, .tag__info-2{
+		grid-column: span 2;
+	}
+	.tags__more-1::after {
+		margin-bottom: 10px;
+		margin-top: 0;
+	}
+	.tag__title-1 {
+		margin-bottom: 0;
+	}
+	.tags__more-2::after {
+		margin-top: 0;
+		margin-bottom: 10px;
+	}
+	.tag__title-2 {
+		margin-bottom: 0;
+	}
+	.tag__pic-pic-2 {
+		margin-bottom: 20px;
+	}
+	.tag__pic-pic-3 {
+		margin-bottom: 20px;
+	}
+	.tag__pic-pic {
+		margin-bottom: 20px;
+		grid-template-columns: 80px 240px;
+	}
+	.tag__desk-1 {
+		font-size: 24px;
+	}
+	.header__link {
+		font-size: 34px;
+	}
+	.markets__1::after {
+		font-size: 20px;
+		content: "_____________________________________________";
+	}
 }
 
-.head h1 {	
-	padding-left: 20px;
+@media screen and (max-width: 440px){
+	.markets__1::after {
+		font-size: 20px;
+		content: "________________________________________";
+	}
 }
 
-img {
-    max-width: 500px;
+@media screen and (max-width: 400px){
+	.intro__title {
+		font-size: 36px;
+		margin-bottom: 20px;
+	}
+	.plant__title_1 {
+		font-size: 36px;
+	}
+	.plant__desk_1 {
+		font-size: 16px;
+	}
+	.plant__title_2 {
+		font-size: 36px;
+	}
+	.plant__desk_2 {
+		font-size: 16px;
+	}
+	.activities__title {
+		font-size: 32px;
+	}
+	.activities__card-desc {
+		font-size: 18px;
+	}
+	.tomato__all {
+		height: 15vh;
+		margin-top: 197px;
+	}
+	.tomatoes__all-strip::after {
+		height: 120px;
+	}
+	.markets__1::after {
+		content: "_______________________________________";
+	}
+	.markets__card-title {
+		font-size: 18px;
+	}
+	.contact__us-title {
+		font-size: 38px;
+		padding-top: 20px;
+		padding-bottom: 10px;
+	}
+	.contact__us__more::after {
+		margin-bottom: 20px;
+	}
+	.contact__us {
+		height: 10vh;
+		margin-top: 197px;
+	}
+	.tag__desk-1 {
+		font-size: 22px;
+	}
+	.header__link {
+		font-size: 28px;
+	}
+	.tag__pic-pic{
+		grid-template-columns: 60px 180px;	
+	}
 }
 
-img {
-    max-width: 1010px;
+@media screen and (max-width: 380px){
+	.markets__1::after {
+		content: "_______________________________";
+	}
 }
 
-.left-container {
-    padding-left: 30px;
-}
+@media screen and (max-width: 320px){
+	.intro__title {
+		font-size: 26px;
+		margin-bottom: 15px;
+	}
+	.intro {
+		padding-top: 200px;
+		height: 55vh;
+	}
+	.plant__title_1 {
+		font-size: 26px;
+	}
+	.plant__title_2 {
+		font-size: 26px;
+	}
+	.activities__title {
+		font-size: 26px;
+	}
+	.serch-form__field {
+		width: 220px;
+	}
+	.activities__card-desc {
+		font-size: 16px;
+	}
+	.tomatoes__all-strip::after {
+		height: 170px;
+	}
+	.markets__1::after {
+		content: "_____________________________";
+	}
+	.tomatoes__all-strip-1::after {
+		height: 70px;
+	}
+	.tag__title {
+		font-size: 26px;
+	}
+	.tag__desk {
+		font-size: 24px;
+		margin-bottom: 10px;
+	}
+	.tag__more::after {
+		font-size: 14px;
+		margin-bottom: 10px;
+	}
+	.tag__desk-1 {
+		font-size: 16px;
+	}
+	.tag__pic-pic{
+		grid-template-columns: 60px 160px;	
+	}
+	.tag__pic-pic-2 {
+		font-size: 14px;
+	}
+	.tags__desk-1 {
+		font-size: 14px;
+	}
+	.tag__pic-pic-3 {
+		font-size: 14px;
+	}
+	.tomato__all {
+		height: 10vh;
+		margin-top: 197px;
+	}
+	.contact__us-title {
+		font-size: 26px;
+		padding-top: 10px;
+	}
+	.contact__us__more::after {
+		margin-bottom: 10px;
+	}
 
-.left-container,
-.right-container {
-    width: 46%; 
-	padding: 0 30px;
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-@media (max-width: 768px)
-{
-	
-
-	
-}
-
-
-@media (max-width: 640px)
-{
-	
-}
-
-@media (max-width: 480px)
-{
-	
-}
-
-@media (max-width: 400px)
-{
-	
-}
-
-@media (max-width: 320px)
-{
-	
+	.contact__pic, .contact-form__field-3{
+		margin-bottom: 10px;
+	}
 }
