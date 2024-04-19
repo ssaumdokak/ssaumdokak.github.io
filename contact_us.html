@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header class="header__tomato__all">
+		<div class="wrapper">
+			<div class="header__wrapper">
+				<div class="header__logo">
+					<a href="/" class="header__logo-link">
+						<img src="./images/svg/logo.svg" alt="Agridera Seeds and Agriculture Ltd" class="header__logo-pic">
+					</a>
+				</div>
+				<div class="header__burger burger">
+					<span class="burger__line burger__line_first"></span>
+					<span class="burger__line burger__line_second"></span>
+					<span class="burger__line burger__line_third"></span>
+				</div>
+				<div class="header__nav__search-form">
+					<form class="search-form">
+						<p class="serch-form__info">
+							<input type="text" class="serch-form__field" placeholder="Search">
+						</p>
+					</form>
+				<nav class="header__nav">
+					<ul class="header__list">
+						<li class="header__item">
+							<a href="index.html" class="header__link">Home</a>
+						</li>
+						<li class="header__item">
+							<a href="#!" class="header__link">Company Profile</a>
+						</li>
+						<li class="header__item">
+							<a href="tomato__all.html" class="header__link">Products</a>
+						</li>
+						<li class="header__item">
+							<a href="#!" class="header__link">Services</a>
+						</li>
+						<li class="header__item">
+							<a href="#!" class="header__link">R & D</a>
+						</li>
+						<li class="header__item">
+							<a href="contact_us.html" class="header__link">Contact</a>
+					</ul>
+					<div class="header__nav-close">
+						<span class="header__nav-close-line"></span>
+						<span class="header__nav-close-line"></span>
+					</div>
+				</nav>
+			</div>
+			</div>
+
+		</div>
+	</header>
+
+
+<main class="main__contact__us">
+    <div class="contact__us"></div>
+	<div class="wrapper-contact">
+
+		<section class="intro__contact__us">
+				<div class="contact__us__block">
+					<h1 class="contact__us-title">
+						Contact us
+					</h1>
+					<a class="contact__us__more"></a>
+				</div>
+		</section>
+
+	<div class="tag__tomatoes">
+
+		<div class="contact-cart" v-if="product" v-for="p in cart">
+
+			<div class="carts__cart cart">
+				<div class="cart__pic">
+					<img :src="'img/'+p.image" class="contact_card-pic">
+				</div>
+				
+				<div class="cart__info" >
+					<h1 class="cart__title" >
+						{{p.title}}
+					</h1>
+					<p class="cart__desk">
+						{{p.short_text}}
+					</p>
+				</div>
+
+				<div class="button__close-cart">
+					<button type="submit" class="close__cart" @click.prevent="removeFromCart(p.id)" v-if="checkInCart">
+						<img src="./images/close_icon.jpg" alt="close_icon" class="close_icon">
+					</button>
+				</div>
+
+			</div>
+
+		</div>
+	
+
+	
+	<form name="contact-form" @submit.prevent="makeOrder" v-if="orderVisible==0"> 
+		<div class="wrapper-full-contact">
+
+			<div class="contacts__contact contact">
+				<div class="contact__info">
+					<p class="contact__desk">
+                        Name
+						<span class="required">*</span>
+					</p>
+					<div class="contact-form">
+						<p class="contact-form__info">
+							<input type="text" name="name" id="name" value size="30" class="contact-form__field" required v-model="contactFields.name">
+						</p>
+					</div>
+				</div>
+
+                <div class="contact__info">
+                    <p class="contact__desk">
+                        You are a					
+                    </p>
+                    <div class="contact-form">
+                        <p class="contact-form__info-1">
+                            <select name="producer" id="producer" aria-required="true" aria-invalid="false" class="contact-form__field-1" v-model.number="contactFields.producer">
+                                <option>seed producer</option>
+                            </select>
+                        </p>
+                    </div>
+                </div>
+			</div>
+
+            <div class="contacts__contact contact">
+				<div class="contact__info">
+					<p class="contact__desk">
+                        Company Name
+					</p>
+					<div class="contact-form">
+						<p class="contact-form__info">
+							<input type="text" name="company" id="company" value size="30" class="contact-form__field" v-model="contactFields.company">
+						</p>
+					</div>
+				</div>
+
+                <div class="contact__info">
+                    <p class="contact__desk">
+                        If other, please specify					
+                    </p>
+					<div class="contact-form">
+						<p class="contact-form__info">
+							<input type="text" name="specify" id="specify" value size="40" class="contact-form__field-1" v-model="contactFields.specify">
+						</p>
+					</div>
+                </div>
+			</div>
+
+            <div class="contacts__contact contact">
+				<div class="contact__info">
+					<p class="contact__desk">
+                        Position
+					</p>
+					<div class="contact-form">
+						<p class="contact-form__info">
+							<input type="text" name="position" id="position" value size="30" class="contact-form__field" v-model="contactFields.position">
+						</p>
+					</div>
+
+                    <p class="contact__desk">
+                        City
+                    </p>
+                    <div class="contact-form">
+                        <p class="contact-form__info">
+                            <input type="text" name="city" id="city" value size="30" class="contact-form__field" v-model="contactFields.city">
+						</p>
+                    </div>
+
+                    <p class="contact__desk">
+                        Country
+                    </p>
+                    <div class="contact-form">
+                        <p class="contact-form__info">
+                            <input type="text" name="country" id="country" value size="30" class="contact-form__field" v-model="contactFields.country">
+						</p>
+                    </div>
+
+                    <p class="contact__desk">
+                        Telephone
+                    </p>
+                    <div class="contact-form">
+                        <p class="contact-form__info">
+                            <input type="text" name="telephone" id="telephone" value size="30" class="contact-form__field" v-model="contactFields.telephone">
+						</p>
+                    </div>
+				</div>
+
+                <div class="contact__info">
+                    <p class="contact__desk">
+                        You are interested in					
+                    </p>
+					<form class="contact-form">
+						<p class="contact-form__info">
+							<textarea aria-invalid="true" name="interested" id="interested" v-model="contactFields.interested" class="contact-form__field-2"></textarea>
+						</p>
+					</form>
+                </div>
+
+                <div class="contact__info">
+					<p class="contact__desk">
+                        Email
+						<span class="required">*</span>
+					</p>
+					<div class="contact-form">
+						<p class="contact-form__info">
+							<input type="email" name="email" id="email" value size="30" class="contact-form__field" required v-model="contactFields.email">
+						</p>
+					</div>
+				</div>
+
+                <div class="contact__info">
+                    <p class="contact__desk">
+                        Please type this code					
+                    </p>
+                    <div class="wrapper__full__code">
+                        <div class="contact__info-grid">
+                            <img src="./images/svg/code.svg" alt="code" class="contact__pic">
+                            <input type="text" name="code" id="code" class="contact-form__field-3" v-model="contactFields.code">
+							<button type="submit" id="submit" @submit.prevent="makeOrder" class="contact__pic-1">
+								Send Message
+							</button>
+                        </div>
+                    </div>
+                </div>
+			</div>
+		</div>
+			
+	</form>
+
+
+	<div class="wrapper-full-contact" v-if="orderVisible==1">
+
+		<div class="contact__LIST">
+			<h3 class="title__LIST">
+				Thank you for ordering on our website!<br> 
+				Your contact details have been recorded!
+			</h3>
+		</div>
+
+		<div class="contacts__contact contact">
+			<div class="contact__info">
+				<p class="contact__desk">
+					Name: {{contactFields.name}}
+				</p>
+				<div class="contact-form"></div>
+			</div>
+
+			<div class="contact__info">
+				<p class="contact__desk">
+					You are a: {{contactFields.producer}}					
+				</p>
+				<div class="contact-form"></div>
+			</div>
+		</div>
+
+		<div class="contacts__contact contact">
+			<div class="contact__info">
+				<p class="contact__desk">
+					Company Name: {{contactFields.company}}
+				</p>
+				<div class="contact-form"></div>
+			</div>
+
+			<div class="contact__info">
+				<p class="contact__desk">
+					If other, please specify: {{contactFields.specify}}					
+				</p>
+				<div class="contact-form"></div>
+			</div>
+		</div>
+
+		<div class="contacts__contact contact">
+			<div class="contact__info">
+				<p class="contact__desk">
+					Position: {{contactFields.position}}
+				</p>
+				<div class="contact-form"></div>
+
+				<p class="contact__desk">
+					City: {{contactFields.city}}
+				</p>
+				<div class="contact-form"></div>
+
+				<p class="contact__desk">
+					Country: {{contactFields.country}}
+				</p>
+				<div class="contact-form"></div>
+
+				<p class="contact__desk">
+					Telephone: {{contactFields.telephone}}
+				</p>
+				<div class="contact-form"></div>
+			</div>
+
+			<div class="contact__info">
+				<p class="contact__desk">
+					You are interested in: {{contactFields.interested}}					
+				</p>
+				<form class="contact-form"></form>
+			</div>
+
+			<div class="contact__info">
+				<p class="contact__desk">
+					Email: {{contactFields.email}}
+				</p>
+				<div class="contact-form"></div>
+			</div>
+		</div>
+	</div>
+
+	</div>
+
+
+
+	</div>
+
+
+
+    <section class="contact-us">
+        <div class="contact-us__wrap">
+            <h2 class="contact-us__title">
+                Our Address
+            </h2>
+            <a class="contact-us__more"></a>
+            <div class="contact-us__info">
+                <div class="contact-us__contant">
+                    <p class="contact-us-desc">
+                        AGRIDERA Seeds & Agriculture Ltd.<br>
+                        P.O Box 103,<br>
+                        Gedera 70750, Israel.<br>
+                        Telephone: +972 8 944 9222
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</main>
+<script src="./js/main_effects.js"></script>
+
+
+<footer class="footer">
+	<div class="wrapper1">
+		<div class="footer__item">
+			<div class="footer__menu">
+				<ul class="footer__list">
+					<li class="footer__item">
+						<a href="index.html" class="footer__link">PROFILE</a>
+					</li>
+					<li class="footer__item">
+						<a href="#!" class="footer__link">MANAGEMENT</a>
+					</li>
+					<li class="footer__item">
+						<a href="#!" class="footer__link">PRODUCTS</a>
+					</li>
+					<li class="footer__item">
+						<a href="#!" class="footer__link">R&D</a>
+					</li>
+					<li class="footer__item">
+						<a href="#!" class="footer__link">LINKS</a>
+					</li>
+					<li class="footer__item">
+						<a href="#!" class="footer__link">SITEMAP</a>
+					</li>
+					<li class="footer__item">
+						<a href="contact_us.html" class="footer__link">CONTACT</a>
+					</li>
+				</ul>
+			</div>
+			<nav class="footer__nav">
+					<ul class="menu__list">
+						<li class="menu__item">
+							<a href="#!" class="menu__link">
+								<img src="./images/svg/Ico_in.svg">	
+							</a>
+						</li>
+						<li class="menu__item">
+							<a href="#!" class="menu__link">
+								<img src="./images/svg/Ico_inst.svg">	 
+							</a>
+						</li>
+						<li class="menu__item">
+							<a href="#!" class="menu__link">
+								<img src="./images/svg/Ico_tube.svg">	
+							</a>
+						</li>
+						<li class="menu__item">
+							<a href="#!" class="menu__link">
+								<img src="./images/svg/Ico_tw.svg">	
+							</a>
+						</li>
+						<li class="menu__item">
+							<a href="#!" class="menu__link">
+								<img src="./images/svg/Ico_fb.svg">	
+							</a>
+						</li>
+					</ul>
+			</nav>
+		</div>
+	</div>
+	<div class="footer__1">
+		<div class="footer__title">
+			<p class="footer__title-1">
+				AGRIDERA SEEDS & AGRICULTURE LTD. © 2020
+			</p>
+		</div>
+	</div>
+	</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+<script src="./js/main.js"></script>
+</body>
+</html>
