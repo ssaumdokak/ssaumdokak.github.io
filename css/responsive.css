@@ -630,7 +630,6 @@
 	}
 }
 
-
 @media screen and (max-width: 360px){
 	.intro__title {
 		font-size: 26px;
@@ -707,7 +706,6 @@
 	}
 }
 
-
 @media screen and (max-width: 320px){
 	.intro__title {
 		font-size: 26px;
@@ -778,8 +776,15 @@
 	.contact__us__more::after {
 		margin-bottom: 10px;
 	}
-
 	.contact__pic, .contact-form__field-3{
 		margin-bottom: 10px;
 	}
+	.cart__title{
+		font-size: 22px;
+	}
+	.cart__desk{
+		font-size: 14px;
+	}
+
+
 }
