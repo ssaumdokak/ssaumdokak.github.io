@@ -383,7 +383,7 @@ html{
 	 padding: 0 15px;
  }
 
- /* Header styles start */
+
 
  .header{
 	 position: fixed;
@@ -490,10 +490,7 @@ html{
 	bottom: 0;
 }
 
- /* Header styles end */
 
-
- /*Intro styles start */
 
 .intro{
 	height: 100vh;
@@ -529,9 +526,7 @@ html{
 	background: #387b2d;
 }
 
- /*Intro styles end */
 
-/* Products styles start */
 
 .products{
 	margin-bottom: 70px;
@@ -573,10 +568,7 @@ html{
 	text-align: center;
 }
 
-/* Products styles end */
 
-
-/* Plants styles start */
 
 .plants{
 	margin-bottom: 100px;
@@ -659,11 +651,7 @@ html{
 	color: #324950;
 }
 
-/* Plants styles end */
 
-
-
-/* Activities styles start */
 
 .activities__wrap{
 	max-width: 1920px;
@@ -750,9 +738,7 @@ html{
 	margin-bottom: 90px;
 }
 
-/* Activities styles end */
 
-/* Footer styles start */
 
 .footer{
 	background: #2D3F45;
@@ -842,14 +828,7 @@ html{
 	color: #B9B9B9;
 	}
 
-/* Footer styles end */
 
-
-
-
-/*******************************************************************/
-
-/* Header__tomato__all styles start */
 
 .header__tomato__all{
 	position: fixed;
@@ -862,14 +841,14 @@ html{
 	z-index: 999;
 }
 
-/* Header__tomato__all styles end*/
+
 
 .main__tomatoes{
 	/*background: #f8eded;*/
 	background: #f8e0c6;
 }
 
-/* Intro__tomato__all styles start */
+
 
 .tomato__all{
 	height: 50vh;
@@ -882,9 +861,6 @@ html{
 
 }
 
-/* Intro__tomato__all styles end */
-
-/* Tomatoes__block styles start*/
 
 .tomatoes__block{
 	max-width: 1150px;
@@ -959,10 +935,7 @@ html{
 	padding-top: 21px;
 }
 
-/* Tomatoes__block styles end */
 
-
-/* Markets styles start */
 
 .markets__wrap{
 	max-width: 1150px;
@@ -1018,7 +991,7 @@ span.bold {
 	font-weight: bold;
   }
 
-/* Markets styles end */
+
 
 .wrapper-full-1{
 	max-width: 1150px;
@@ -1053,7 +1026,7 @@ span.bold {
 	padding-top: 40px;
 }
 
-/* Tag__tomatoes styles start */
+
 
 .tag__tomatoes__cards{
 	display: grid;
@@ -1133,11 +1106,7 @@ span.bold {
 	margin-bottom: 20px;
 }
 
-/* Tag__tomatoes styles end */
 
-/**************************************************************/
-
-/* Tomatoes__one__block styles start */
 
 .tomatoes__one__block{
 	max-width: 1150px;
@@ -1167,9 +1136,7 @@ span.bold {
 	background: url(../images/svg/arrow.svg) no-repeat left center;
 }
 
-/* Tomatoes__one__block styles end */
 
-/* Tags styles start */
 
 .wrapper-full-2{
 	max-width: 1150px;
@@ -1379,9 +1346,7 @@ span.bold {
 	margin-bottom: 168px;
 }
 
-/* Tags styles start */
 
-/**************************************************************/
 
 .main__contact__us{
 	background: #f8eded;
@@ -1393,7 +1358,7 @@ span.bold {
 	padding: 0 15px;
 }
 
-/* Intro__contact__us styles start */
+
 
 .contact__us{
 	height: 50vh;
@@ -1405,9 +1370,6 @@ span.bold {
 
 }
 
-/* Intro__contact__us styles end */
-
-/* Contact__us__block styles start*/
 
 .contact__us__block{
 	max-width: 1110px;
@@ -1437,10 +1399,7 @@ span.bold {
 	margin-bottom: 50px;
 }
 
-/* Contact__us__block styles end */
 
-
-/* Contacts styles start */
 
 .wrapper-full-contact{
 	max-width: 1140px;
@@ -1561,9 +1520,6 @@ span.bold {
 	border-radius: 10px;
 }
 
-/* Contacts styles end */
-
-/* Contact-us styles start */
 
 .contact-us__wrap{
 	max-width: 1920px;
@@ -1604,13 +1560,13 @@ span.bold {
 	margin-bottom: 44px;
 }
 
-/* Contact-us styles end */
+
 
 .required{
 	color: red;
 }
 
-/* Contact-cart (tomato__one) start */
+
 
 .contact-cart{
 	box-sizing: border-box;
@@ -1697,4 +1653,3 @@ span.bold {
 	color: #da800c;
 }
 
-/* Contact-cart (tomato__one) styles end */
