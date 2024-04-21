@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tomato one</title>
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/responsive.css">
-    <meta name="viewport" content="width=320, initial-scale=1.0"/>
 </head>
 <body>
     <header class="header__tomato__all">
@@ -66,42 +64,48 @@
 
         <div class="tomatoes__one__block">
             <a href="tomato__all.html" class="tomatoes__one-desc">
-                Return to all tomatoes
+                <!--Return to all tomatoes-->
+				Return to all bananas
             </a> 
         </div>
 
 
-	<div class="tags">
+
+
+	<div class="tag__tomatoes">
 		<div class="wrapper-full-2">
 
 			<div class="tags__tag tag">
 				<div class="tag__info">
 					<h1 class="tag__title">
-						TAG 1002 (TAG 809)
+						{{product.title}}
 					</h1>
 					<p class="tag__desk">
-						Tomato Determinate
-						Red Standard Round
+						{{product.short_text}}
 					</p>
 					<a class="tag__more"></a>
 					<div class="wrapper__full-3">
-						<div class="tag__pic-pic">
-							<img src="./images/svg/tomatoes.svg" alt="tomatoes" class="tag__pic-1">
+						<div class="tag__pic-pic"> 
+							<img src="./images/svg/tomatoes.svg" alt="tomatoes" class="tag__pic-1"> 
 							<p class="tag__desk-1">
-								Very high yield and excellent fruits quality!
+								{{product.desc}}
 							</p>
 						</div>
 					</div>
 				</div>
 				<div class="tag__pic">
-					<img src="./images/tag_809.jpg" alt="tag_809" class="tag__thumb">
-					<button type="submit" class="tag__pic-pic-1">
-						<a href="1002.pdf" download=""><img src="./images/svg/ico_pdf.svg" alt="ico_pdf" class="tag__pic__1">
-						Download pdf
-					</button></a>
+					<!--<img src="./images/tag_809.jpg" alt="tag_809" class="tag__thumb">-->
+						<img :src="'img/'+product.image" class="tag__tomatoes__card-pic">
+					
+						<button type="submit" class="tag__pic-pic-1">
+							<img src="./images/svg/ico_pdf.svg" alt="ico_pdf" class="tag__pic__1">
+							<!--Download pdf-->
+							<a class="pdf" href="#" @click.prevent="addToCart(product.id)" v-if="btnVisible==0">  Add to cart </a>
+							<a class="pdf" href="contact_us.html" v-if="btnVisible==1"> Go to cart </a>
+						</button>
 				</div>
 			</div>
-			\
+
 			<div class="wrapper-full-4">
 				<div class="tags__tag-1 tag-1">
 					<div class="tag__info-1">
@@ -175,7 +179,7 @@
 						<a class="tags__more-2"></a>
 						<div class="tag__pic-pic-3">
 							  <p>Red</p>
-							
+							<!--<img src="./images/svg/group_1.svg" alt="group_1" class="tag__pic-3">-->
 						</div>													
 					</div>
 				</div>
@@ -183,6 +187,30 @@
 
 		</div>
 	</div>
+	<!-- Tags end -->
+
+	<!--<div class="tag__tomatoes">
+		<div class="wrapper-full-1">
+			<div class="tag__tomatoes__cards">
+
+				<div class="tag__tomatoes__card tag__tomatoes__card_size_lg" v-if="products" v-for="p in products">
+					<a :href="'tomato__one.html#'+p.id" class="bananaIMG__tomato-one">
+					<img :src="'img/'+p.image" alt="banans" class="tag__tomatoes__card-pic">
+					</a>
+					<h5 class="tag__tomatoes__card-title">
+						<div class="tag__card">
+							<h6 class="tag__card-title">
+								<span class="bold">{{p.title}}</span>
+							</h6>
+							<p class="tag__card-desc">
+								{{p.short_text}} 
+							</p>
+						</div>
+					</h5>
+				</div>
+			</div>	
+		</div>
+	</div>-->
 
 </main>
 <script src="./js/main_effects.js"></script>
@@ -257,5 +285,7 @@
 	</div>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+<script src="./js/main.js"></script>
 </body>
 </html>
