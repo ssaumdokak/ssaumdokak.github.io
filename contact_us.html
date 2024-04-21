@@ -173,6 +173,7 @@
 
                     <p class="contact__desk">
                         City
+			    <span class="required">*</span>
                     </p>
                     <div class="contact-form">
                         <p class="contact-form__info">
@@ -182,6 +183,7 @@
 
                     <p class="contact__desk">
                         Country
+			    <span class="required">*</span>
                     </p>
                     <div class="contact-form">
                         <p class="contact-form__info">
@@ -191,10 +193,11 @@
 
                     <p class="contact__desk">
                         Telephone
+			    <span class="required">*</span>
                     </p>
                     <div class="contact-form">
                         <p class="contact-form__info">
-                            <input type="text" name="telephone" id="telephone" value size="30" class="contact-form__field" v-model="contactFields.telephone">
+                            <input type="text" name="telephone" id="telephone" autocomplete="phone" value size="30" class="contact-form__field" v-model="contactFields.telephone">
 						</p>
                     </div>
 				</div>
@@ -217,14 +220,15 @@
 					</p>
 					<div class="contact-form">
 						<p class="contact-form__info">
-							<input type="email" name="email" id="email" value size="30" class="contact-form__field" required v-model="contactFields.email">
+							<input type="email" name="email" id="email" autocomplete="email" value size="30" class="contact-form__field" required v-model="contactFields.email">
 						</p>
 					</div>
 				</div>
 
                 <div class="contact__info">
                     <p class="contact__desk">
-                        Please type this code					
+                        Please type this code	
+			    <span class="required">*</span>
                     </p>
                     <div class="wrapper__full__code">
                         <div class="contact__info-grid">
