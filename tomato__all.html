@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Tomato all</title>
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/responsive.css">
-    <meta name="viewport" content="width=320, initial-scale=1.0"/>
 
 </head>
 <body>
@@ -68,8 +66,8 @@
         <section class="intro__tomato__all">
             <div class="tomatoes__block">
                 <h1 class="tomatoes__all-title">
-                    Agridera Fresh Market Tomato Hybrids
-				
+
+					Fresh Market Banana Hybrids
                 </h1>
                 <a class="tomaties__all__more"></a>
                 <p class="tomatoes__all-desc-1">
@@ -87,6 +85,8 @@
                 </h2>
             </div>
     </section>
+
+
 
 		<section class="markets">
 			<div class="markets__wrap">
@@ -129,28 +129,30 @@
             </div>
         </section>
 
+
+
 		<div class="tag__tomatoes">
 			<div class="wrapper-full-1">
 				<div class="tag__tomatoes__cards">
 
-					<div class="tag__tomatoes__card tag__tomatoes__card_size_lg">
-						<img src="./images/tag_1000.jpg" alt="tag_1000" class="tag__tomatoes__card-pic">
-						<a href="tomato__one.html" class="tag__tomatoes__link"></a>
+					<div class="tag__tomatoes__card tag__tomatoes__card_size_lg" v-if="products" v-for="p in products">
+						<a :href="'tomato__one.html#'+p.id" class="bananaIMG__tomato-one">
+							<img :src="'img/'+p.image" class="tag__tomatoes__card-pic">
+						</a>
 						<h5 class="tag__tomatoes__card-title">
 							<div class="tag__card">
 								<h6 class="tag__card-title">
-									<span class="bold">TAG 1000 (TAG 853)</span>
+									<span class="bold">{{p.title}}</span>
 								</h6>
 								<p class="tag__card-desc">
-									Tomato Determinate Red Standard Round 
+									{{p.short_text}} 
 								</p>
 							</div>
 						</h5>
 					</div>
 
-					<div class="tag__tomatoes__card tag__tomatoes__card_size_lg">
+					<!--<div class="tag__tomatoes__card tag__tomatoes__card_size_lg">
 						<img src="./images/tag_1001.jpg" alt="tag_1001" class="tag__tomatoes__card-pic">
-						<a href="tomato__one.html" class="tag__tomatoes__link"></a>
 						<h5 class="tag__tomatoes__card-title">
 							<div class="tag__card">
 								<h6 class="tag__card-title">
@@ -178,7 +180,6 @@
 
 					<div class="tag__tomatoes__card tag__tomatoes__card_size_lg">
 						<img src="./images/tag_1003.jpg" alt="tag_1003" class="tag__tomatoes__card-pic">
-						<a href="tomato__one.html" class="tag__tomatoes__link"></a>
 						<h5 class="tag__tomatoes__card-title">
 							<div class="tag__card">
 								<h6 class="tag__card-title">
@@ -192,7 +193,6 @@
 
 					<div class="tag__tomatoes__card tag__tomatoes__card_size_lg">
 						<img src="./images/tag_1004.jpg" alt="tag_1004" class="tag__tomatoes__card-pic">
-						<a href="tomato__one.html" class="tag__tomatoes__link"></a>
 						<h5 class="tag__tomatoes__card-title">
 							<div class="tag__card">
 								<h6 class="tag__card-title">
@@ -206,7 +206,6 @@
 
 					<div class="tag__tomatoes__card tag__tomatoes__card_size_lg">
 						<img src="./images/tag_1005.jpg" alt="tag_1005" class="tag__tomatoes__card-pic">
-						<a href="tomato__one.html" class="tag__tomatoes__link"></a>
 						<h5 class="tag__tomatoes__card-title">
 							<div class="tag__card">
 								<h6 class="tag__card-title">
@@ -220,7 +219,6 @@
 
 					<div class="tag__tomatoes__card tag__tomatoes__card_size_lg">
 						<img src="./images/tag_1006.jpg" alt="tag_1006" class="tag__tomatoes__card-pic">
-						<a href="tomato__one.html" class="tag__tomatoes__link"></a>
 						<h5 class="tag__tomatoes__card-title">
 							<div class="tag__card">
 								<h6 class="tag__card-title">
@@ -233,7 +231,6 @@
 					</div>
 					<div class="tag__tomatoes__card tag__tomatoes__card_size_lg">
 						<img src="./images/tag_1007.jpg" alt="tag_1007" class="tag__tomatoes__card-pic">
-						<a href="tomato__one.html" class="tag__tomatoes__link"></a>
 						<h5 class="tag__tomatoes__card-title">
 							<div class="tag__card">
 								<h6 class="tag__card-title">
@@ -243,10 +240,37 @@
 									Tomato Determinate Red Elongated
 								</p>
 						</h5>
-					</div>
+					</div>-->
 
 				</div>
 			</div>
+<!-- Tag__tomatoes end -->
+
+<!-- bananasList start -->
+<!--<div class="bananasList cards">
+	<div class="bananaCard">
+		<div class="bananaItem card" v-if="products" v-for="p in products">
+			<div class="cards">
+				<div class="bananaImg">
+					<a :href="'tomato__one.html#'+p.id" class="bananaIMG__tomato-one">
+						{{p.id}}
+					<img :src="'../img/'+p.image" alt="banana" class="banana__card-pic">
+					</a>
+				</div>
+			</div>
+			<div class="banana__title">
+				<h7>
+				<span class="bold">{{p.title}}</span>
+				</h7>
+			</div>
+			<div class="bananaInfo">
+				<span class="bold">{{p.short_text}}</span>
+				<br>
+				{{p.desc}}
+			</div>
+		</div>
+	
+</div>-->
 
 </main>
 <script src="./js/main_effects.js"></script>
@@ -321,5 +345,7 @@
 	</div>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+<script src="./js/main.js"></script>
 </body>
 </html>
