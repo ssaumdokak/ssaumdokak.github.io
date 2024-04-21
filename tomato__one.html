@@ -100,7 +100,7 @@
 						<img :src="'img/'+product.image" class="tag__tomatoes__card-pic">
 					
 						<button type="submit" class="tag__pic-pic-1">
-							<img src="./images/svg/ico_pdf.svg" alt="ico_pdf" class="tag__pic__1">
+							<a href="1002.pdf" download=""><img src="./images/svg/ico_pdf.svg" alt="ico_pdf" class="tag__pic__1"></a>
 							<!--Download pdf-->
 							<a class="pdf" href="#" @click.prevent="addToCart(product.id)" v-if="btnVisible==0">  Add to cart </a>
 							<a class="pdf" href="contact_us.html" v-if="btnVisible==1"> Go to cart </a>
