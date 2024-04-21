@@ -138,7 +138,7 @@
 				<div class="tag__tomatoes__cards">
 
 					<div class="tag__tomatoes__card tag__tomatoes__card_size_lg" v-if="products" v-for="p in products">
-						<a :href="'tomato__one.html#'+p.id" class="bananaIMG__tomato-one">
+						<a :href="'tomato__one.html#'+p.id" class="potatoIMG__tomato-one">
 							<img :src="'img/'+p.image" class="tag__tomatoes__card-pic">
 						</a>
 						<h5 class="tag__tomatoes__card-title">
@@ -248,24 +248,24 @@
 			</div>
 <!-- Tag__tomatoes end -->
 
-<!-- bananasList start -->
-<!--<div class="bananasList cards">
-	<div class="bananaCard">
-		<div class="bananaItem card" v-if="products" v-for="p in products">
+<!-- potatoesList start -->
+<!--<div class="potatoesList cards">
+	<div class="potatoCard">
+		<div class="potatoItem card" v-if="products" v-for="p in products">
 			<div class="cards">
-				<div class="bananaImg">
-					<a :href="'tomato__one.html#'+p.id" class="bananaIMG__tomato-one">
+				<div class="potatoImg">
+					<a :href="'tomato__one.html#'+p.id" class="potatoIMG__tomato-one">
 						{{p.id}}
-					<img :src="'../img/'+p.image" alt="banana" class="banana__card-pic">
+					<img :src="'../img/'+p.image" alt="potato" class="potato__card-pic">
 					</a>
 				</div>
 			</div>
-			<div class="banana__title">
+			<div class="potato__title">
 				<h7>
 				<span class="bold">{{p.title}}</span>
 				</h7>
 			</div>
-			<div class="bananaInfo">
+			<div class="potatoInfo">
 				<span class="bold">{{p.short_text}}</span>
 				<br>
 				{{p.desc}}
