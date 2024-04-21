@@ -177,7 +177,7 @@
                     </p>
                     <div class="contact-form">
                         <p class="contact-form__info">
-                            <input type="text" name="city" id="city" value size="30" class="contact-form__field" v-model="contactFields.city">
+                            <input type="text" name="city" id="city" value size="30" class="contact-form__field" required v-model="contactFields.city">
 						</p>
                     </div>
 
@@ -187,7 +187,7 @@
                     </p>
                     <div class="contact-form">
                         <p class="contact-form__info">
-                            <input type="text" name="country" id="country" value size="30" class="contact-form__field" v-model="contactFields.country">
+                            <input type="text" name="country" id="country" value size="30" class="contact-form__field" required v-model="contactFields.country">
 						</p>
                     </div>
 
@@ -197,7 +197,7 @@
                     </p>
                     <div class="contact-form">
                         <p class="contact-form__info">
-                            <input type="text" name="telephone" id="telephone" autocomplete="phone" value size="30" class="contact-form__field" v-model="contactFields.telephone">
+                            <input type="text" name="telephone" id="telephone" autocomplete="phone" value size="30" class="contact-form__field" required v-model="contactFields.telephone">
 						</p>
                     </div>
 				</div>
@@ -233,7 +233,7 @@
                     <div class="wrapper__full__code">
                         <div class="contact__info-grid">
                             <img src="./images/svg/code.svg" alt="code" class="contact__pic">
-                            <input type="text" name="code" id="code" class="contact-form__field-3" v-model="contactFields.code">
+                            <input type="text" name="code" id="code" class="contact-form__field-3" required v-model="contactFields.code">
 							<button type="submit" id="submit" @submit.prevent="makeOrder" class="contact__pic-1">
 								Send Message
 							</button>
