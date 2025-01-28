@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function(){
     const main = {
         data() {
             return {
-                url: "http://affiliate.danil.com",
+                url: "http://affiliate.elvira.com",
                 user: { 
                   name: "",
                   phone: "",
