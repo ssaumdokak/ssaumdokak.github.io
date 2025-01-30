@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', function(){
                     self.user = JSON.parse(window.localStorage.getItem('user'));
                 }
 
+                
                 router.isReady().then(() => {
                     if (window.localStorage.getItem("user")) {
                         self.user = JSON.parse(window.localStorage.getItem('user'));
