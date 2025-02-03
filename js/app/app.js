@@ -1,5 +1,7 @@
 import { router } from './router.js';
 import {msg} from './widgets/msg.js';
+import {popup} from './widgets/popup.js';
+import {header} from './widgets/header.js';
 
 document.addEventListener('DOMContentLoaded', function(){
     const main = {
@@ -35,7 +37,6 @@ document.addEventListener('DOMContentLoaded', function(){
                     self.user = JSON.parse(window.localStorage.getItem('user'));
                 }
 
-                
                 router.isReady().then(() => {
                     if (window.localStorage.getItem("user")) {
                         self.user = JSON.parse(window.localStorage.getItem('user'));
@@ -115,7 +116,9 @@ document.addEventListener('DOMContentLoaded', function(){
     };
 
     Vue.createApp(main)
+        .component('Header',header)
         .component('msg',msg)
+        .component('popup',popup)
         .use(router)
         .mount('#content');
 });
