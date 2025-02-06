@@ -15,6 +15,7 @@ export const campaign = {
             all: true,
         };
     },
+    
     mounted: function () {
         this.parent = this.$parent.$parent;
         if (!this.parent.user) {
