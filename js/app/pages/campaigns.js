@@ -14,6 +14,7 @@ export const campaigns = {
             type: 0,
             all: true,
         };
+        
     },
     mounted: function () {
         this.parent = this.$parent.$parent;
