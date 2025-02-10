@@ -10,7 +10,7 @@ export const msg = {
             confirmTitle: "", 
             confirm: "",
         };
-    },
+    }, 
     watch: {},
     mounted() {
         this.parent = this.$parent.$parent.$parent;
