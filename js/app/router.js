@@ -3,7 +3,7 @@ import { campaigns } from './pages/campaigns.js';
 import { campaign } from './pages/campaign.js';
 import { users } from './pages/users.js';
 import { user } from './pages/user.js';
-
+ 
 export const router = VueRouter.createRouter({
     history: VueRouter.createWebHashHistory(),
     routes: [
