@@ -25,7 +25,7 @@ var VueRouter = (function (exports, vue) {
   const noop = () => { };
   /**
    * Typesafe alternative to Array.isArray
-   * https://github.com/microsoft/TypeScript/pull/48228
+   * https: //github.com/microsoft/TypeScript/pull/48228
    */
   const isArray = Array.isArray;
 
