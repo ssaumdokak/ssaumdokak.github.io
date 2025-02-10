@@ -15,7 +15,7 @@ export const header = {
         toogleActive() {
             this.active = this.active === 1 ? 0 : 1;
         },
-    },
+    }, 
     template: `
         <header class="header">
             <div class="wrapper">
