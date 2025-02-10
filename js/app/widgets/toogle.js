@@ -18,7 +18,6 @@ export var toogle = {
         },
     },
     props: {
-        
         modelValue: String,
     },
     template: `
