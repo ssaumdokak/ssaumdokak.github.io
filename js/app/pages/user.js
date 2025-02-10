@@ -11,7 +11,7 @@ export const user = {
             iChart: -1,
             loader: 1,
         };
-    },
+    }, 
     mounted: function () {
         this.parent = this.$parent.$parent;
         if (!this.parent.user) {
