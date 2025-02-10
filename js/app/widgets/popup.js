@@ -9,7 +9,7 @@ export const popup = {
             left: "50%",
             height: "auto",
         };
-    },
+    }, 
     watch: {
         active: function (o, n) {
             if (o == 1 && !this.fullscreen) {
