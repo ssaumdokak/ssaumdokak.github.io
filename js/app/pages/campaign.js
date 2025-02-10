@@ -13,7 +13,7 @@ export const campaign = {
             id: 0,
             type: 0,
             all: true,
-        };
+        }; 
     },
     mounted: function () {
         this.parent = this.$parent.$parent;
