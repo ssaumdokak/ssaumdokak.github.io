@@ -5,7 +5,7 @@ import { header } from "./widgets/header.js";
 import { toogle } from "./widgets/toogle.js";
 import { img } from "./widgets/img.js";
 
-
+ 
 document.addEventListener("DOMContentLoaded", function () {
     const main = {
         data() {
