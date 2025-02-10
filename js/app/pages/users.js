@@ -9,7 +9,7 @@ export const users = {
         loader: 1,
         type: 0,
         uid: -1,
-      };
+      }; 
     },
     mounted: function () {
       this.parent = this.$parent.$parent;
