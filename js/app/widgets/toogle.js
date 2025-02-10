@@ -3,7 +3,7 @@ export var toogle = {
         return {
             value: "",
         };
-    },
+    }, 
     watch: {
         modelValue: function (o, n) {
             this.value = this.modelValue;
