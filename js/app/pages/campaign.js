@@ -15,7 +15,6 @@ export const campaign = {
             all: true,
         };
     },
-    
     mounted: function () {
         this.parent = this.$parent.$parent;
         if (!this.parent.user) {
@@ -197,7 +196,6 @@ export const campaign = {
                 let dates = [];
                 let clicks = [];
                 let views = [];
-                let leads = [];
 
                 if (item && item["line"]) {
                     for (let i in item["line"]) {
@@ -424,8 +422,9 @@ export const campaign = {
                 </div>
                 <div class="rows">
                   <label class="custom-label">Type</label>
+                  <i class="select-icon fas fa-chevron-down"></i>
                   <select v-model="parent.formData.type" required>
-                    <option value="0"></option>
+                    <option value="0">---</option>
                     <option 
                       v-if="data.types" 
                       v-for="c in data.types" 
