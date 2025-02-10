@@ -3,7 +3,7 @@ export var img = {
       return {
         value: "",
       };
-    },
+    }, 
     mounted() {
         if (this.modelValue && typeof this.modelValue === "string") {
           this.value = this.parentUrl + "/" + this.modelValue;
