@@ -9,7 +9,7 @@ export const users = {
         loader: 1,
         type: 0,
         uid: -1,
-      }; 
+      };
     },
     mounted: function () {
       this.parent = this.$parent.$parent;
@@ -144,7 +144,7 @@ export const users = {
               </form>
             </div>
           </popup>
-          <popup ref="copy" title="Copy banner">
+          <popup ref="copy" :title="'Copy banner'">
             <div class="form inner-form">
               <form v-if="parent.formData">
                 <div class="rows">
